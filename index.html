@@ -61,10 +61,16 @@
 
         .contact-info {
             display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-row {
+            display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            margin-top: 20px;
         }
 
         .contact-item {
@@ -313,33 +319,37 @@
 <body>
     <div class="container">
         <header>
-            <h1>Yasir Ali, PhD</h1>
+            <h1>Dr. Yasir Ali, PhD</h1>
             <div class="awards-banner">
                 🏆 NSFC-2026 & BJNSF-2026 Winner as Principal Investigator
             </div>
             <div class="title">Postdoctoral Researcher | Control Science & Engineering Specialist</div>
             
             <div class="contact-info">
-                <div class="contact-item">
-                    📧 <a href="mailto:yasiralibit@gmail.com">yasiralibit@gmail.com</a>
+                <div class="contact-row">
+                    <div class="contact-item">
+                        📧 <a href="mailto:yasiralibit@gmail.com">yasiralibit@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        📱 +86-188-13060503
+                    </div>
+                    <div class="contact-item">
+                        💬 WeChat: dryasirali
+                    </div>
+                    <div class="contact-item">
+                        📍 Zhengzhou, Henan, China
+                    </div>
                 </div>
-                <div class="contact-item">
-                    📱 +86-188-13060503
-                </div>
-                <div class="contact-item">
-                    💬 WeChat: dryasirali
-                </div>
-                <div class="contact-item">
-                    📍 Zhengzhou, Henan, China
-                </div>
-                <div class="contact-item">
-                    🔗 <a href="https://scholar.google.com/citations?hl=en&user=sMtnz_YAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>
-                </div>
-                <div class="contact-item">
-                    🔗 <a href="https://ieeexplore.ieee.org/author/948811808693085" target="_blank">IEEE Profile</a>
-                </div>
-                <div class="contact-item">
-                    🔗 <a href="https://www.linkedin.com/in/yasir-ali-48192675/" target="_blank">LinkedIn</a>
+                <div class="contact-row">
+                    <div class="contact-item">
+                        🔗 <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+                    </div>
+                    <div class="contact-item">
+                        🔗 <a href="https://ieee.org" target="_blank">IEEE Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        🔗 <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    </div>
                 </div>
             </div>
             
