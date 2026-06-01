@@ -3,818 +3,532 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Yasir Ali - Postdoctoral Researcher</title>
+  <title>Dr. Yasir Ali | Secure & Resilient Cyber-Physical Systems</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Dr. Yasir Ali — Postdoctoral Researcher in secure and resilient cyber-physical systems, Polar Codes, UAV systems, chaotic encryption, networked control systems, and AI/ML-enabled optimization." />
-  <meta name="keywords" content="Yasir Ali, cyber-physical systems, secure CPS, resilient CPS, polar codes, UAVs, chaotic encryption, cloud control systems, AI, machine learning, control science" />
+  <meta name="description" content="Dr. Yasir Ali is a Postdoctoral Researcher working on secure and resilient cyber-physical systems, Polar Codes, UAV systems, chaotic encryption, cloud control systems, and AI/ML-enabled optimization." />
+  <meta name="keywords" content="Yasir Ali, cyber-physical systems, secure CPS, resilient CPS, Polar Codes, UAVs, chaotic encryption, cloud control systems, networked control systems, AI, machine learning, control science, Beijing Institute of Technology" />
   <meta name="author" content="Dr. Yasir Ali" />
+  <meta name="theme-color" content="#0f2742" />
 
   <style>
     :root{
-      --primary:#667eea;
-      --secondary:#764ba2;
-      --text:#333;
-      --muted:#666;
-      --panel:#ffffff;
-      --panelSoft:#f8f9fa;
-      --shadow:0 5px 25px rgba(0,0,0,0.15);
-      --shadowHeavy:0 10px 40px rgba(0,0,0,0.2);
-      --danger:#f5576c;
-      --success:#11998e;
+      --navy:#0f2742;
+      --navy-2:#14395e;
+      --ink:#172033;
+      --muted:#667085;
+      --muted-2:#8792a2;
+      --line:#e6eaf0;
+      --paper:#ffffff;
+      --soft:#f6f8fb;
+      --soft-2:#eef3f8;
+      --gold:#b48a2c;
+      --gold-soft:#fff6df;
+      --blue:#1f6feb;
+      --green:#117865;
+      --red:#b42318;
+      --shadow:0 18px 50px rgba(15,39,66,.09);
+      --shadow-soft:0 10px 28px rgba(15,39,66,.07);
+      --radius:20px;
+      --radius-sm:14px;
+      --max:1180px;
     }
 
-    *{ margin:0; padding:0; box-sizing:border-box; }
-
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
     body{
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height:1.6;
-      color:var(--text);
-      background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color:var(--ink);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.65;
+      background:
+        radial-gradient(circle at top left, rgba(180,138,44,.16), transparent 33rem),
+        linear-gradient(180deg, #f9fbfd 0%, #eef3f8 100%);
       min-height:100vh;
     }
 
-    .container{
-      max-width:1200px;
-      margin:0 auto;
-      padding:20px;
+    a{color:var(--blue);text-decoration:none}
+    a:hover{text-decoration:underline;text-underline-offset:3px}
+    strong{font-weight:750;color:#111827}
+    p{margin-bottom:.75rem}
+
+    .skip-link{
+      position:absolute;left:-999px;top:12px;background:var(--navy);color:#fff;padding:10px 14px;border-radius:10px;z-index:1000
+    }
+    .skip-link:focus{left:12px}
+
+    .site-header{
+      background:linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 62%, #1d4d78 100%);
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.14);
+      position:relative;
+      overflow:hidden;
+    }
+    .site-header::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(255,255,255,.18), transparent 24rem),
+        radial-gradient(circle at 82% 18%, rgba(180,138,44,.30), transparent 22rem);
+      pointer-events:none;
     }
 
-    header{
-      background:rgba(255,255,255,0.98);
-      padding:40px;
-      border-radius:15px;
-      box-shadow:var(--shadowHeavy);
-      margin-bottom:30px;
-      text-align:center;
-      animation:fadeInDown 0.8s ease;
+    .nav-wrap{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(15,39,66,.93);
+      border-bottom:1px solid rgba(255,255,255,.12);
     }
-
-    @keyframes fadeInDown{
-      from{ opacity:0; transform:translateY(-30px); }
-      to{ opacity:1; transform:translateY(0); }
+    .nav{
+      max-width:var(--max);margin:0 auto;padding:12px 24px;
+      display:flex;align-items:center;justify-content:space-between;gap:18px;
     }
+    .brand{
+      display:flex;align-items:center;gap:10px;color:#fff;font-weight:780;letter-spacing:.01em;
+    }
+    .brand-mark{
+      width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+      background:linear-gradient(135deg, var(--gold), #f0d28a);color:#0f2742;font-weight:900;
+      box-shadow:0 8px 24px rgba(0,0,0,.18);
+    }
+    .nav-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
+    .nav-links a{
+      color:rgba(255,255,255,.84);font-size:.91rem;font-weight:650;padding:7px 10px;border-radius:999px;
+    }
+    .nav-links a:hover{background:rgba(255,255,255,.10);color:#fff;text-decoration:none}
 
+    .hero{
+      position:relative;max-width:var(--max);margin:0 auto;padding:72px 24px 58px;
+      display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;padding:7px 12px;font-size:.86rem;font-weight:700;margin-bottom:18px;
+    }
+    .eyebrow span{width:7px;height:7px;border-radius:50%;background:#5eead4;box-shadow:0 0 0 5px rgba(94,234,212,.12)}
     h1{
-      color:var(--primary);
-      font-size:2.5em;
-      margin-bottom:8px;
+      font-size:clamp(2.55rem, 5vw, 5rem);
+      line-height:.98;letter-spacing:-.055em;margin-bottom:18px;
     }
-
-    .title{
-      font-size:1.2em;
-      color:var(--secondary);
-      margin-bottom:20px;
-      font-weight:600;
+    .hero-title{
+      color:#dfe9f6;font-size:clamp(1.05rem,1.5vw,1.32rem);font-weight:700;margin-bottom:20px;
     }
-
-    .subtitle{
-      max-width:900px;
-      margin:0 auto 20px auto;
-      color:#555;
-      font-size:1.02em;
+    .hero-summary{
+      color:rgba(255,255,255,.82);font-size:1.06rem;max-width:720px;margin-bottom:28px;
     }
-
-    .contact-info{
-      display:flex;
-      flex-direction:column;
-      gap:15px;
-      margin-top:20px;
+    .hero-actions,.profile-links{display:flex;flex-wrap:wrap;gap:11px;align-items:center}
+    .button{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      border-radius:999px;padding:11px 16px;font-weight:780;font-size:.94rem;border:1px solid transparent;
+      transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
     }
+    .button:hover{transform:translateY(-1px);text-decoration:none}
+    .button.primary{background:#fff;color:var(--navy);box-shadow:0 12px 30px rgba(0,0,0,.16)}
+    .button.secondary{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.22);color:#fff}
+    .button.secondary:hover{background:rgba(255,255,255,.16)}
+    .button.gold{background:var(--gold);color:#111827;box-shadow:0 12px 30px rgba(180,138,44,.22)}
 
-    .contact-row{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
+    .hero-card{
+      background:rgba(255,255,255,.95);color:var(--ink);border:1px solid rgba(255,255,255,.45);
+      border-radius:28px;padding:26px;box-shadow:0 28px 80px rgba(0,0,0,.20);
+      backdrop-filter:blur(16px);
     }
-
-    .contact-item{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      color:#555;
-    }
-
-    a{
-      color:var(--primary);
-      text-decoration:none;
-      transition:color 0.2s;
-    }
-
-    a:hover{ color:var(--secondary); text-decoration:underline; }
-
-    .profile-links{
-      margin-top:18px;
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:12px;
-    }
-
+    .hero-card h2{font-size:1.05rem;color:var(--navy);letter-spacing:.03em;text-transform:uppercase;margin-bottom:14px}
+    .contact-grid{display:grid;gap:12px;margin-bottom:20px}
+    .contact-item{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;color:#3f4a5a;font-size:.96rem}
+    .contact-icon{width:30px;height:30px;border-radius:10px;background:var(--soft-2);display:grid;place-items:center;color:var(--navy);font-weight:800}
     .profile-links a{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      background:var(--panelSoft);
-      color:var(--primary);
-      border:1px solid rgba(102,126,234,0.25);
-      padding:8px 14px;
-      border-radius:999px;
-      font-weight:600;
-      box-shadow:0 2px 8px rgba(0,0,0,0.06);
+      display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--soft);color:var(--navy);
+      padding:8px 11px;border-radius:999px;font-weight:760;font-size:.88rem;
+    }
+    .profile-links a:hover{background:var(--navy);color:#fff;text-decoration:none;border-color:var(--navy)}
+
+    .metrics{
+      max-width:var(--max);margin:-32px auto 34px;padding:0 24px;position:relative;z-index:3;
+      display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+    }
+    .metric-card{
+      background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 18px 16px;box-shadow:var(--shadow-soft);
+    }
+    .metric-card .number{font-size:1.72rem;font-weight:900;color:var(--navy);line-height:1;margin-bottom:5px}
+    .metric-card .label{font-size:.88rem;color:var(--muted);font-weight:680}
+
+    main{max-width:var(--max);margin:0 auto;padding:0 24px 56px}
+    section{
+      background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:34px;margin-bottom:24px;
+      scroll-margin-top:84px;
+    }
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px;border-bottom:1px solid var(--line);padding-bottom:16px}
+    .section-kicker{color:var(--gold);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:850;margin-bottom:3px}
+    h2{font-size:clamp(1.45rem,2vw,2rem);letter-spacing:-.03em;color:var(--navy);line-height:1.15}
+    .section-note{color:var(--muted);font-size:.94rem;max-width:520px;text-align:right}
+
+    .summary-card{
+      background:linear-gradient(180deg, var(--soft) 0%, #fff 100%);border:1px solid var(--line);border-radius:18px;padding:24px;
+    }
+    .summary-card p{font-size:1.02rem;color:#3a4554;margin-bottom:0}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .tag{
+      border:1px solid #d7e2ef;background:#f8fbff;color:#173b60;padding:7px 11px;border-radius:999px;font-size:.87rem;font-weight:720;
     }
 
-    .profile-links a:hover{
-      color:white;
-      background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      text-decoration:none;
+    .timeline{display:grid;gap:16px}
+    .item{
+      position:relative;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#fbfcfe 100%);
+      border-radius:16px;padding:20px 20px 18px 22px;box-shadow:0 6px 18px rgba(15,39,66,.04);
     }
+    .item::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:4px;border-radius:0 999px 999px 0;background:var(--gold)}
+    .item-top{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:8px}
+    .item h3{font-size:1.08rem;color:#141c2f;line-height:1.32;margin-bottom:3px}
+    .meta{color:var(--blue);font-weight:720;font-size:.94rem}
+    .date{flex:0 0 auto;color:var(--navy);background:var(--soft-2);border:1px solid #d9e4ef;border-radius:999px;padding:5px 10px;font-size:.84rem;font-weight:800;white-space:nowrap}
+    .item p{color:#4d5868;font-size:.96rem;margin-bottom:0}
 
-    .awards-banner{
-      background:linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      color:white;
-      padding:20px 30px;
-      border-radius:10px;
-      margin:20px 0;
-      text-align:center;
-      font-weight:700;
-      font-size:1.15em;
-      box-shadow:0 5px 20px rgba(0,0,0,0.15);
-      animation:pulse 2s infinite;
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .mini-card{
+      border:1px solid var(--line);border-radius:16px;background:#fff;padding:18px;box-shadow:0 6px 18px rgba(15,39,66,.04);
     }
+    .mini-card h3{color:var(--navy);font-size:1.02rem;margin-bottom:6px}
+    .mini-card p,.mini-card li{color:#4d5868;font-size:.94rem}
+    .mini-card ul{list-style:none;display:grid;gap:8px;margin-top:10px}
+    .mini-card li::before{content:"•";color:var(--gold);font-weight:900;margin-right:8px}
 
-    @keyframes pulse{
-      0%,100%{ transform:scale(1); }
-      50%{ transform:scale(1.02); }
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .project-card{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff;position:relative;overflow:hidden}
+    .project-card::after{content:"";position:absolute;top:0;right:0;width:72px;height:72px;background:linear-gradient(135deg,rgba(180,138,44,.18),transparent 65%)}
+    .project-card .grant{font-size:.84rem;color:var(--green);font-weight:850;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+    .project-card h3{font-size:1.02rem;color:var(--navy);line-height:1.35;margin-bottom:8px}
+    .project-card p{font-size:.93rem;color:#4d5868;margin-bottom:0}
+
+    .pub-list{counter-reset:pub;display:grid;gap:12px}
+    .pub-card{
+      border:1px solid var(--line);border-radius:16px;background:#fff;padding:17px 18px;display:grid;gap:8px;
+      transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease;
     }
-
-    .section{
-      background:var(--panel);
-      padding:35px;
-      border-radius:15px;
-      margin-bottom:30px;
-      box-shadow:var(--shadow);
-      animation:fadeInUp 0.8s ease;
+    .pub-card:hover{border-color:#bfd1e6;transform:translateY(-1px);box-shadow:0 10px 26px rgba(15,39,66,.08)}
+    .pub-title{font-weight:820;color:#121a2b;line-height:1.38}
+    .pub-details{color:#535f70;font-size:.93rem}
+    .pub-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .badge,.doi-link{
+      display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 9px;font-size:.78rem;font-weight:800;
     }
+    .badge{background:var(--soft-2);color:#23476c;border:1px solid #d9e4ef}
+    .badge.if{background:var(--gold-soft);border-color:#f0d99a;color:#6f4f04}
+    .badge.accepted{background:#ecfdf3;border-color:#c7f0d8;color:#087443}
+    .badge.review{background:#fff2f1;border-color:#ffd5d2;color:var(--red)}
+    .doi-link{background:#eff6ff;border:1px solid #cfe2ff;color:#174ea6}
+    .doi-link:hover{background:#174ea6;color:#fff;text-decoration:none;border-color:#174ea6}
+    .subhead{margin:28px 0 14px;color:var(--navy);font-size:1.22rem;letter-spacing:-.02em}
+    .subhead:first-of-type{margin-top:0}
 
-    @keyframes fadeInUp{
-      from{ opacity:0; transform:translateY(30px); }
-      to{ opacity:1; transform:translateY(0); }
+    .award-list{display:grid;gap:14px}
+    .award-card{display:grid;grid-template-columns:165px 1fr;gap:16px;border:1px solid var(--line);border-radius:16px;background:#fff;padding:17px}
+    .award-date{font-size:.86rem;font-weight:850;color:#7a5808;background:var(--gold-soft);border:1px solid #f0d99a;border-radius:12px;padding:8px 10px;height:max-content;text-align:center}
+    .award-card h3{font-size:1.02rem;color:#131c2e;margin-bottom:4px}
+    .award-card p{color:#526073;font-size:.94rem;margin-bottom:0}
+
+    .language-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .language-card{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}
+    .language-card h3{font-size:1rem;color:var(--navy);margin-bottom:4px}.language-card p{color:var(--muted);font-weight:720;margin-bottom:0}
+
+    .reference-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .reference-card{border:1px solid var(--line);border-radius:16px;background:#fff;padding:20px;text-align:center;box-shadow:0 6px 18px rgba(15,39,66,.04)}
+    .reference-card h3{font-size:1.05rem;color:var(--navy);margin-bottom:8px}.reference-card p{font-size:.93rem;color:#4d5868;margin-bottom:10px}
+    .reference-card a{font-weight:760;font-size:.91rem}
+
+    .footer{
+      background:var(--navy);color:rgba(255,255,255,.78);padding:34px 24px;text-align:center;
     }
+    .footer-inner{max-width:var(--max);margin:0 auto}.footer strong{color:#fff}.footer a{color:#fff;font-weight:750}
 
-    h2{
-      color:var(--primary);
-      border-bottom:3px solid var(--secondary);
-      padding-bottom:10px;
-      margin-bottom:25px;
-      font-size:1.8em;
+    @media (max-width:960px){
+      .hero{grid-template-columns:1fr;padding-top:44px}.metrics{grid-template-columns:repeat(2,1fr);margin-top:0}.grid-2,.project-grid,.reference-grid{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(2,1fr)}.section-note{text-align:left}.section-head{align-items:start;flex-direction:column}.nav{align-items:flex-start;flex-direction:column}.nav-links{justify-content:flex-start}.award-card{grid-template-columns:1fr}.language-grid{grid-template-columns:repeat(2,1fr)}
     }
-
-    h3.section-subhead{
-      color:var(--secondary);
-      margin-top:26px;
-      margin-bottom:15px;
-      font-size:1.25em;
+    @media (max-width:640px){
+      .nav-links{display:none}.hero{padding:36px 18px}.hero-card,section{border-radius:16px;padding:22px}.metrics,main{padding-left:18px;padding-right:18px}.metrics,.grid-3,.language-grid{grid-template-columns:1fr}.item-top{flex-direction:column}.date{width:max-content}h1{font-size:2.7rem}.button{width:100%}.profile-links a{flex:1 1 auto;justify-content:center}
     }
-
-    h3.section-subhead:first-of-type{ margin-top:0; }
-
-    .profile-summary{
-      font-size:1.05em;
-      color:#555;
-      background:var(--panelSoft);
-      padding:22px;
-      border-radius:10px;
-      border-left:4px solid var(--primary);
+    @media print{
+      body{background:#fff;color:#000}.nav-wrap,.hero-actions,.profile-links,.footer{display:none}.site-header{background:#fff;color:#000}.hero{display:block;padding:0}.hero-card{box-shadow:none;border:1px solid #ccc}.metrics{margin:0;grid-template-columns:repeat(4,1fr);padding:0}.metric-card,section{box-shadow:none;break-inside:avoid}.site-header::before{display:none}a{color:#000;text-decoration:none}.doi-link{border:1px solid #999;background:#fff;color:#000}
     }
-
-    .education-item, .job-item, .publication-item, .project-item{
-      margin-bottom:22px;
-      padding:20px;
-      background:var(--panelSoft);
-      border-radius:10px;
-      border-left:4px solid var(--primary);
-      transition:transform 0.2s, box-shadow 0.2s;
-    }
-
-    .education-item:hover, .job-item:hover, .publication-item:hover, .project-item:hover{
-      transform:translateX(5px);
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .date{
-      color:var(--secondary);
-      font-weight:600;
-      margin-bottom:8px;
-    }
-
-    .degree, .job-title, .project-title{
-      font-weight:600;
-      color:var(--text);
-      font-size:1.1em;
-      margin-bottom:5px;
-    }
-
-    .institution, .company, .project-meta{
-      color:var(--primary);
-      margin-bottom:8px;
-    }
-
-    .publication-title{
-      font-weight:700;
-      color:var(--text);
-      margin-bottom:8px;
-      line-height:1.5;
-    }
-
-    .publication-details{
-      color:var(--muted);
-      font-size:0.95em;
-      margin-bottom:8px;
-    }
-
-    .publication-links{
-      margin-top:8px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
-
-    .link-pill, .impact-factor{
-      display:inline-block;
-      color:white;
-      padding:4px 11px;
-      border-radius:15px;
-      font-size:0.85em;
-      margin-top:5px;
-      font-weight:600;
-    }
-
-    .impact-factor{ background:var(--primary); }
-    .link-pill{ background:var(--success); }
-    .link-pill:hover{ color:white; background:var(--secondary); text-decoration:none; }
-
-    .skills-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-      gap:20px;
-    }
-
-    .skill-category{
-      background:var(--panelSoft);
-      padding:20px;
-      border-radius:10px;
-      border-top:3px solid var(--primary);
-    }
-
-    .skill-category h3{
-      color:var(--secondary);
-      margin-bottom:12px;
-    }
-
-    .skill-category ul{ list-style:none; padding-left:0; }
-    .skill-category li{ padding:5px 0; color:#555; }
-    .skill-category li::before{
-      content:"▸ ";
-      color:var(--primary);
-      font-weight:bold;
-    }
-
-    .research-interests{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:18px;
-      justify-content:center;
-    }
-
-    .interest-tag{
-      background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      color:white;
-      padding:8px 16px;
-      border-radius:20px;
-      font-size:0.9em;
-      transition:transform 0.2s;
-    }
-
-    .interest-tag:hover{ transform:scale(1.05); }
-
-    .awards-list{ list-style:none; }
-
-    .award-item{
-      background:var(--panelSoft);
-      padding:20px;
-      margin-bottom:15px;
-      border-radius:10px;
-      border-left:4px solid var(--danger);
-    }
-
-    .award-year{
-      color:var(--danger);
-      font-weight:600;
-      margin-bottom:8px;
-    }
-
-    .references-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-      gap:20px;
-    }
-
-    .reference-card{
-      background:var(--panelSoft);
-      padding:20px;
-      border-radius:10px;
-      text-align:center;
-      border-top:3px solid var(--primary);
-    }
-
-    .reference-card h3{ color:var(--text); margin-bottom:5px; }
-    .reference-card .position{ color:var(--secondary); font-size:0.9em; margin-bottom:10px; }
-    .reference-card .email{ color:var(--primary); font-size:0.9em; }
-
-    footer{
-      text-align:center;
-      padding:30px;
-      color:white;
-      font-size:0.9em;
-    }
-
-    @media (max-width:768px){
-      h1{ font-size:1.8em; }
-      .section{ padding:20px; }
-      header{ padding:25px; }
-    }
-
-    /* Accessibility: reduce motion */
-    @media (prefers-reduced-motion: reduce){
-      *{
-        animation:none !important;
-        transition:none !important;
-        scroll-behavior:auto !important;
-      }
-    }
+    @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
   </style>
 </head>
-
 <body>
-  <div class="container">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <header>
-      <h1>Yasir Ali, PhD</h1>
-
-      <div class="awards-banner">
-        NSFC-2026 &amp; BJNSF-2026 Winner as Principal Investigator | Associate Researcher Senior Professional Title
+  <div class="nav-wrap" aria-label="Primary navigation">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Dr. Yasir Ali homepage"><span class="brand-mark">YA</span><span>Dr. Yasir Ali</span></a>
+      <div class="nav-links">
+        <a href="#profile">Profile</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#honors">Honors</a>
+        <a href="#skills">Skills</a>
+        <a href="#references">References</a>
       </div>
-
-      <div class="title">Postdoctoral Researcher | Secure &amp; Resilient Cyber-Physical Systems</div>
-      <p class="subtitle">
-        Researcher in Control Science and Engineering with work spanning communication security, resilient control,
-        networked/cloud control systems, Polar Codes, UAV systems, chaotic encryption, and AI/ML-enabled optimization.
-      </p>
-
-      <div class="contact-info">
-        <div class="contact-row">
-          <div class="contact-item">📧 <a href="mailto:yasiralibit@gmail.com">yasiralibit@gmail.com</a></div>
-          <div class="contact-item">📱 <a href="tel:+8618813060503">+86-188-13060503</a> (WhatsApp)</div>
-          <div class="contact-item">💬 WeChat: dryasirali</div>
-          <div class="contact-item">📍 Zhengzhou, Henan, China</div>
-        </div>
-      </div>
-
-      <div class="profile-links" aria-label="Profile links">
-        <a href="https://orcid.org/0000-0003-3998-9218" target="_blank" rel="noopener noreferrer">ORCID</a>
-        <a href="https://scholar.google.com/citations?hl=en&amp;user=sMtnz_YAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        <a href="https://ieeexplore.ieee.org/author/948811808693085" target="_blank" rel="noopener noreferrer">IEEE Author Profile</a>
-        <a href="https://www.linkedin.com/in/yasir-ali-48192675/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://dryasirali.github.io/resume.github.io/" target="_blank" rel="noopener noreferrer">GitHub / Web CV</a>
-      </div>
-
-      <div class="research-interests">
-        <div class="interest-tag">Secure &amp; Resilient CPSs</div>
-        <div class="interest-tag">Cloud Control Systems</div>
-        <div class="interest-tag">Networked Control Systems</div>
-        <div class="interest-tag">Polar Codes</div>
-        <div class="interest-tag">UAV Systems</div>
-        <div class="interest-tag">Chaotic Encryption</div>
-        <div class="interest-tag">AI/ML Optimization</div>
-      </div>
-    </header>
-
-    <div class="section">
-      <h2>🔬 Research Profile</h2>
-      <div class="profile-summary">
-        My research focuses on secure and resilient cyber-physical systems (CPSs), with emphasis on communication security,
-        resilient control, networked control systems, Polar Codes, UAV systems, chaotic encryption, and AI/ML-enabled optimization.
-        My work bridges control theory, physical-layer security, coding theory, and intelligent autonomous systems, with publications
-        in leading journals including IEEE Transactions and Elsevier journals.
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>📚 Education</h2>
-
-      <div class="education-item">
-        <div class="date">2018.09 – 2024.06</div>
-        <div class="degree">Ph.D. in Control Science and Engineering</div>
-        <div class="institution"><a href="https://www.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Beijing Institute of Technology, China</a> — School of Automation</div>
-        <p><strong>Thesis:</strong> Enhancing Physical Layer Communications and Security in Optimized CCSs</p>
-        <p><strong>Adviser:</strong> Professor Yuanqing Xia, Fellow, IEEE</p>
-      </div>
-
-      <div class="education-item">
-        <div class="date">2015.09 – 2017.07</div>
-        <div class="degree">M.S. in Control Science and Engineering</div>
-        <div class="institution"><a href="https://www.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Beijing Institute of Technology, China</a> — School of Automation</div>
-        <p><strong>Thesis:</strong> A Detection and Mitigation Approach for CCSs against DDoS Attack</p>
-        <p><strong>Adviser:</strong> Professor Yuanqing Xia, Fellow, IEEE</p>
-      </div>
-
-      <div class="education-item">
-        <div class="date">2009.09 – 2014.09</div>
-        <div class="degree">B.Sc. in Electrical Engineering</div>
-        <div class="institution"><a href="https://www.uetpeshawar.edu.pk/" target="_blank" rel="noopener noreferrer">University of Engineering and Technology, Peshawar</a> — Department of Electrical (Communication) Engineering</div>
-        <p><strong>Thesis:</strong> Ultrasonic Radar System</p>
-        <p><strong>Adviser:</strong> Assistant Professor Sahib Khan</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>💼 Employment History</h2>
-
-      <div class="job-item">
-        <div class="date">2024.10 – Present</div>
-        <div class="job-title">Postdoctoral Researcher</div>
-        <div class="company"><a href="https://zhengzhou.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Zhengzhou Research Institute, Beijing Institute of Technology</a></div>
-        <p>
-          Postdoctoral research primarily focuses on secure and resilient CPSs, integrating Polar Codes, UAV systems,
-          chaotic systems, and AI/ML techniques to improve communication security, reliability, and system resilience.
-          Several research findings have been published in leading international journals.
-        </p>
-      </div>
-
-      <div class="job-item">
-        <div class="date">2021.10 – 2024.09</div>
-        <div class="job-title">Visiting Scholar</div>
-        <div class="company"><a href="https://www.polsl.pl/en/" target="_blank" rel="noopener noreferrer">Silesian University of Technology, Gliwice, Poland</a></div>
-        <p>
-          Worked as a full-time researcher and instructor at the Faculty of Automatic Control, Electronics and Computer Science.
-          Contributed to undergraduate teaching and conducted advanced research, resulting in high-impact publications in IEEE TII and TNNLS.
-        </p>
-      </div>
-
-      <div class="job-item">
-        <div class="date">2014.12 – 2015.08</div>
-        <div class="job-title">Electrical Engineer</div>
-        <div class="company"><a href="https://saifgroup.com/" target="_blank" rel="noopener noreferrer">Power Plant, Saif Textile Mill Limited, Gadoon (Swabi), KP, Pakistan</a></div>
-        <p>
-          Installed and commissioned Caterpillar Gas Gensets (G3520C, G3516A/B), Diesel Genset D3512, and a Waste Heat Recovery Boiler;
-          maintained, operated, and repaired 11kV HT and 440V LT VCBs, OCBs, and other electrical systems.
-        </p>
-      </div>
-
-      <div class="job-item">
-        <div class="date">2014.09 – 2014.12</div>
-        <div class="job-title">Internship</div>
-        <div class="company"><a href="https://www.rcm.com.pk/" target="_blank" rel="noopener noreferrer">Rahman Cotton Mill Takht Bhai Pvt. (Ltd.), KP, Pakistan</a></div>
-        <p>Learned about different types of AC and DC motors and gained practical knowledge in electrical work within the industry.</p>
-      </div>
-
-      <div class="job-item">
-        <div class="date">2013.08 – 2013.10</div>
-        <div class="job-title">Internship</div>
-        <div class="company"><a href="https://pedokp.gov.pk/Main/psp/44" target="_blank" rel="noopener noreferrer">Malakand Hydro Power Complex (Malakand-III), KP, Pakistan</a></div>
-        <p>
-          Gained hands-on experience with power plant layout, equipment and subsystems, operation methodology,
-          and electrical maintenance techniques.
-        </p>
-      </div>
-
-      <div class="job-item">
-        <div class="date">2013.06 – 2013.08</div>
-        <div class="job-title">Internship</div>
-        <div class="company"><a href="https://ptcl.com.pk/" target="_blank" rel="noopener noreferrer">Pakistan Telecommunication Company Limited (PTCL)</a></div>
-        <p>
-          Gained hands-on experience operating and maintaining digital exchanges, OMCs/NMCs (EWSD, ZTE), and worked with CDAS,
-          trunk booking, and telecom system quality assurance.
-        </p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>📝 Selected Publications</h2>
-
-      <h3 class="section-subhead">Selected Journal Publications</h3>
-
-      <div class="publication-item">
-        <div class="publication-title">[J1] Efficient Multi-Dimensional Pipelined Chaotic Bulk-Codewords-Encryption for Cloud Control Systems</div>
-        <div class="publication-details"><b>Yasir Ali</b>, T. Manzoor, H. Yang, L. You, R. Ma, C. Yan, T. Wang, and Y. Xia, Fellow, IEEE | IEEE Transactions on Cybernetics, 55, 5014–5026 (2025)</div>
-        <span class="impact-factor">SCI | Impact Factor: 10.5</span>
-        <a class="link-pill" href="https://doi.org/10.1109/TCYB.2025.3579036" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J2] Chaos Encryption-Based Secure Polar Coding for Network-Oriented Cloud Control System</div>
-        <div class="publication-details"><b>Yasir Ali</b>, Y. Xia, W. Sułek, and T. Manzoor | IEEE Transactions on Industrial Informatics, 20, 3935–3947 (2023)</div>
-        <span class="impact-factor">SCI | Impact Factor: 9.9</span>
-        <a class="link-pill" href="https://doi.org/10.1109/TII.2023.3316217" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J3] Artificial Intelligence Driven Channel Coding and Resource Optimization for Wireless Networks</div>
-        <div class="publication-details"><b>Yasir Ali</b>, T. Manzoor, H. Yang, and Y. Xia, Fellow, IEEE | Computer Science Review (Accepted)</div>
-        <span class="impact-factor">SCI | Impact Factor: 12.7</span>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J4] Resilient Output Feedback Tube-Based MPC for Cyber-Physical Systems Under Hybrid Attacks</div>
-        <div class="publication-details">H. Yang, Y. Ma, H. Xie, <b>Yasir Ali</b>, L. Dai, and Y. Xia, Fellow, IEEE | IEEE Transactions on Circuits and Systems I: Regular Papers</div>
-        <span class="impact-factor">SCI | Impact Factor: 5.2</span>
-        <a class="link-pill" href="https://doi.org/10.1109/TCSI.2025.3597736" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J5] Compound Learning-Based Model Predictive Control Approach for Ducted-Fan Aerial Vehicles</div>
-        <div class="publication-details">T. Manzoor, H. Pei, Member, IEEE, Z. Sun, Member, IEEE, and <b>Yasir Ali</b> | IEEE Transactions on Neural Networks and Learning Systems, 36, 9395–9407 (2024)</div>
-        <span class="impact-factor">SCI | Impact Factor: 8.9</span>
-        <a class="link-pill" href="https://doi.org/10.1109/TNNLS.2024.3422401" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J6] QORA: Neural-Enhanced Interference-Aware Resource Provisioning for Serverless Computing</div>
-        <div class="publication-details">R. Ma, Y. Zhan, C. Wu, Z. Hong, <b>Yasir Ali</b>, and X. Yuanqing, Fellow, IEEE | IEEE Transactions on Automation Science and Engineering, 22, 10609–10624 (2025)</div>
-        <span class="impact-factor">SCI | Impact Factor: 6.4</span>
-        <a class="link-pill" href="https://doi.org/10.1109/TASE.2025.3526197" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J7] Efficient Hardware Realization of SC Polar Decoders Using Compound Pipelined Processing Units and Auxiliary Registers</div>
-        <div class="publication-details"><b>Yasir Ali</b>, Y. Xia, Fellow, IEEE, T. Manzoor, S. Ali, M. Abouhawwash, S. S. Askar, A. K. Kumar, Member, IEEE, and R. Ma | IEEE Access, 12, 23808–23826 (2024)</div>
-        <span class="impact-factor">SCI | Impact Factor: 3.6</span>
-        <a class="link-pill" href="https://doi.org/10.1109/ACCESS.2024.3364384" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J8] Secure Design For Cloud Control System Against Distributed Denial of Service Attack</div>
-        <div class="publication-details"><b>Yasir Ali</b>, Y. Xia, L. Ma, and A. Hammad | Control Theory and Technology, 16, 14–24 (2018)</div>
-        <span class="impact-factor">SCI | Impact Factor: 1.5</span>
-        <a class="link-pill" href="https://doi.org/10.1007/s11768-018-8002-8" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J9] Reliability Weight-Based Extended Puncturing Mechanism for Polar Codes Using Translation Shift</div>
-        <div class="publication-details"><b>Yasir Ali</b> and Y. Xia | Transactions on Emerging Telecommunications Technologies, 35, e4923 (2024)</div>
-        <span class="impact-factor">SCI | Impact Factor: 2.5</span>
-        <a class="link-pill" href="https://doi.org/10.1002/ett.4923" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J10] Artificial Intelligent and Internet of Things Framework for Sustainable Hazardous Waste Management in Hospitals</div>
-        <div class="publication-details">A. K. Kumar, <b>Yasir Ali</b>, R. R. Kumar, M. H. Assaf, and S. Ilyas | Waste Management, 203, 114816 (2025)</div>
-        <span class="impact-factor">SCI | Impact Factor: 7.1</span>
-        <a class="link-pill" href="https://doi.org/10.1016/j.wasman.2025.114816" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J11] Flight Control Techniques and Classification of Ducted Fan Aerial Vehicles</div>
-        <div class="publication-details">T. Manzoor, Y. Xia, <b>Yasir Ali</b>, and K. Hussain | Control Theory and Application, 39(2), 201–221</div>
-        <span class="impact-factor">Indexed: EI</span>
-        <a class="link-pill" href="https://doi.org/10.7641/CTA.2021.00779" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[J12] Numerical Study of Double Droplet Impacts on Heated Films: Influence of Film Thickness and Temperature on Crown and Jet Dynamics</div>
-        <div class="publication-details">M. Mohasan, M. Song, S. M. A. Naqvi, S. Zhou, M. Hamid, and <b>Yasir Ali</b> | Meccanica, Vol. 61, Article No. 48 (2026)</div>
-        <span class="impact-factor">SCI/SCIE | Impact Factor: 2.1</span>
-      </div>
-
-      <h3 class="section-subhead">Selected Conference Publications</h3>
-
-      <div class="publication-item">
-        <div class="publication-title">[C1] Solutions Verification for Cloud-Based Networked Control System Using Karush-Kuhn-Tucker Conditions</div>
-        <div class="publication-details"><b>Yasir Ali</b>, Z. Shen, F. Zhu, G. Xiong, S. Chen, Y. Xia, and Y. Wang | Chinese Automation Congress (CAC), November 30–December 02, 2018, Xi’an, China</div>
-        <a class="link-pill" href="https://doi.org/10.1109/CAC.2018.8623109" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[C2] Measurement Analysis of Error Rate for Belief’s Clipping and Quantization in Polar Codes</div>
-        <div class="publication-details"><b>Yasir Ali</b> and W. Sułek | Radiocommunication and ICT Conference, September 19–21, 2023, Krakow, Poland</div>
-        <a class="link-pill" href="https://doi.org/10.15199/59.2023.4.17" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[C3] A Stabilizing Architecture for Cloud Control System Against DDoS Attack</div>
-        <div class="publication-details"><b>Yasir Ali</b>, Y. Xia, and L. Ma | Chinese Automation Conference (CAC), October 20–22, 2017, Jinan, Shandong, China</div>
-        <a class="link-pill" href="https://doi.org/10.1109/CAC.2017.8243372" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[C4] Interless: Interference-Aware Deep Resource Prediction for Serverless Computing</div>
-        <div class="publication-details">R. Ma, Y. Zhan, T. Yan, Y. Xia, and <b>Yasir Ali</b> | 36th Chinese Control and Decision Conference (CCDC), May 25–27, 2024, Xi’an, China</div>
-        <a class="link-pill" href="https://doi.org/10.1109/CCDC62350.2024.10588201" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[C5] Engineering Problems in Initial Phase of Cloud Control System</div>
-        <div class="publication-details">L. Ma, Y. Xia, <b>Yasir Ali</b>, and Y. Zhan | 36th Chinese Control Conference (CCC), July 26–28, 2017, Dalian, China</div>
-        <a class="link-pill" href="https://doi.org/10.23919/ChiCC.2017.8028603" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[C6] Humanoid Robots Object Grasping and Manipulation Learning by Demonstration</div>
-        <div class="publication-details">H. Ahmad, X. Yao, M. Muddassir, J. Chiragh, and <b>Yasir Ali</b> | 3rd International Conference on Control, Automation and Robotics (ICCAR), April 24–26, 2017, Nagoya, Japan</div>
-        <a class="link-pill" href="https://doi.org/10.1109/ICCAR.2017.7942678" target="_blank" rel="noopener noreferrer">DOI</a>
-      </div>
-
-      <h3 class="section-subhead">Ongoing Work</h3>
-
-      <div class="publication-item">
-        <div class="publication-title">[SJ1] Authenticated ECDH-Driven Chaotic Packet Protection for Resilient Cloud Control Systems</div>
-        <div class="publication-details"><b>Yasir Ali</b>, T. Manzoor, L. Dai, and Y. Xia | IEEE Transactions on Cybernetics (Under Review)</div>
-        <span class="impact-factor">SCI | Impact Factor: 10.5</span>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[SJ2] Reliability-Aware Adaptive CRC-Aided Polar Decoding With Configurable Effort Control</div>
-        <div class="publication-details"><b>Yasir Ali</b> | IEEE Transactions on Communications (Under Review)</div>
-        <span class="impact-factor">SCI | Impact Factor: 8.3</span>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[SJ3] Cyber-Physical Safety Capsule for Cloud-Controlled UAVs Under Availability and Integrity Attacks</div>
-        <div class="publication-details"><b>Yasir Ali</b>, T. Manzoor, M. M., and Y. Xia | ACM Transactions on Cyber-Physical Systems (Under Review)</div>
-        <span class="impact-factor">ESCI | Impact Factor: 2.9</span>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[SJ4] Towards Efficient and Secure Cloud Control Systems: Advances, Challenges, and Future Directions</div>
-        <div class="publication-details"><b>Yasir Ali</b>, T. Manzoor, H. Yang, A. Ali, and Y. Xia | Annual Reviews in Control (Elsevier) (Under Review)</div>
-        <span class="impact-factor">SCI | Impact Factor: 10.7</span>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[SJ5] Physics-Informed Sparse Identification-Based Tube Model Predictive Control for Aerial Vehicles</div>
-        <div class="publication-details">T. Manzoor, <b>Yasir Ali</b>, Y. Xia, L. You, and Y. Wang | Engineering Applications of Artificial Intelligence (Under Review)</div>
-        <span class="impact-factor">SCI | Impact Factor: 8.0</span>
-        <a class="link-pill" href="https://doi.org/10.48550/arXiv.2605.23354" target="_blank" rel="noopener noreferrer">arXiv DOI</a>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">[SJ6] Event-Sensory-Feedback Approach to Distributed Attack Isolation in Resilient Output Consensus</div>
-        <div class="publication-details">C. Yan, W. Zhang, L. Yan, B. Dong, Q. Wang, <b>Yasir Ali</b>, and Y. Xia, Fellow, IEEE | IEEE Transactions on Cybernetics (Under Review)</div>
-        <span class="impact-factor">SCI | Impact Factor: 10.5</span>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>💰 Research Grants &amp; Projects</h2>
-
-      <div class="project-item">
-        <div class="date">2026.01 – 2026.12</div>
-        <div class="project-title">National Natural Science Foundation of China (NSFC)</div>
-        <div class="project-meta">Principal Investigator | Grant No. W2533176 | RMB 200,000</div>
-        <p>One-year project under the category of Research Fund for International Young Scientists.</p>
-      </div>
-
-      <div class="project-item">
-        <div class="date">2026.01 – 2026.12</div>
-        <div class="project-title">Beijing Natural Science Foundation (BJNSF)</div>
-        <div class="project-meta">Principal Investigator | Grant No. IS25064 | RMB 200,000</div>
-        <p>One-year project under the category of International Scholars.</p>
-      </div>
-
-      <div class="project-item">
-        <div class="date">2025.12 – 2026.09</div>
-        <div class="project-title">High-End Foreign Experts Project of Henan Province</div>
-        <div class="project-meta">Grant No. HNGD2026007 | RMB 150,000</div>
-        <p>Selected as a high-level foreign expert for a fully funded 10-month research program.</p>
-      </div>
-
-      <div class="project-item">
-        <div class="date">2026.01 – 2026.12</div>
-        <div class="project-title">Henan Postdoctoral Foundation Research Fund</div>
-        <div class="project-meta">Principal Investigator | Grant No. HN2026058 | RMB 100,000</div>
-        <p>One-year project under the category of Henan Postdoctoral Research Funding Scheme.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>🏆 Honors &amp; Awards</h2>
-      <ul class="awards-list">
-        <li class="award-item">
-          <div class="award-year">2025.12 – 2028.09</div>
-          <strong>Senior Professional Title — Associate Researcher</strong><br />
-          Awarded the Natural Science Research Series Senior Professional Title of Associate Researcher in Henan Province, China.
-        </li>
-
-        <li class="award-item">
-          <div class="award-year">2018.09 – 2019.07</div>
-          <strong>Best Paper Award</strong><br />
-          Awarded by Control Theory and Technology for an outstanding research article published in the 2018–2019 volume.
-        </li>
-
-        <li class="award-item">
-          <div class="award-year">2015.09 – 2023.07</div>
-          <strong>Chinese Government Scholarship</strong><br />
-          Awarded for Master’s and Doctoral studies in Beijing; a competitive scholarship supporting full tuition and living expenses.
-        </li>
-
-        <li class="award-item">
-          <div class="award-year">2011.03 – 2012.04</div>
-          <strong>Academic Excellence Award</strong><br />
-          Awarded by the Khyber Pakhtunkhwa Provincial Government for achieving a cumulative score of 80% across Bachelor’s examinations.
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>💻 Hardware &amp; Computer Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Programming</h3>
-          <ul>
-            <li>C</li>
-            <li>C++</li>
-            <li>Python</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>Numerical Analysis &amp; Optimization</h3>
-          <ul>
-            <li>MATLAB</li>
-            <li>YALMIP, CasADi, OSQP</li>
-            <li>Octave</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>Hardware &amp; Control Tools</h3>
-          <ul>
-            <li>FPGA design with VHDL and Verilog</li>
-            <li>LabVIEW</li>
-            <li>Simulink</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>Drafting, CAD &amp; Operating Systems</h3>
-          <ul>
-            <li>LaTeX, Microsoft Office, WPS, Inkscape</li>
-            <li>FreeCAD</li>
-            <li>Windows, Ubuntu, macOS</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>🌍 Language Competencies</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>English</h3>
-          <p style="color:#555;">Excellent</p>
-        </div>
-        <div class="skill-category">
-          <h3>Urdu</h3>
-          <p style="color:#555;">Excellent</p>
-        </div>
-        <div class="skill-category">
-          <h3>Chinese</h3>
-          <p style="color:#555;">Fair level</p>
-        </div>
-        <div class="skill-category">
-          <h3>Polish</h3>
-          <p style="color:#555;">Basic level</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>👥 References</h2>
-      <div class="references-grid">
-        <div class="reference-card">
-          <h3><a href="https://ieeexplore.ieee.org/author/37293555300" target="_blank" rel="noopener noreferrer">Professor Yuanqing Xia</a></h3>
-          <div class="position">Fellow, IEEE; Professor<br />Beijing Institute of Technology</div>
-          <div class="email"><a href="mailto:xia_yuanqing@bit.edu.cn">xia_yuanqing@bit.edu.cn</a></div>
-        </div>
-
-        <div class="reference-card">
-          <h3><a href="https://ieeexplore.ieee.org/author/37089468569" target="_blank" rel="noopener noreferrer">Dr. Tayyab Manzoor</a></h3>
-          <div class="position">Faculty Member<br />Zhongyuan University of Technology</div>
-          <div class="email"><a href="mailto:tayyab@zut.edu.cn">tayyab@zut.edu.cn</a></div>
-        </div>
-
-        <div class="reference-card">
-          <h3><a href="https://ieeexplore.ieee.org/author/38520916800" target="_blank" rel="noopener noreferrer">Dr. Zhai Di-Hua</a></h3>
-          <div class="position">Associate Professor<br />Beijing Institute of Technology</div>
-          <div class="email"><a href="mailto:zhaidih@bit.edu.cn">zhaidih@bit.edu.cn</a></div>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      <p>© 2026 Dr. Yasir Ali | For more details, contact via Email/WhatsApp/WeChat</p>
-    </footer>
-
+    </nav>
   </div>
+
+  <header class="site-header" id="top">
+    <div class="hero">
+      <div>
+        <div class="eyebrow"><span></span> Postdoctoral Researcher · Control Science & Engineering</div>
+        <h1>Yasir Ali, PhD</h1>
+        <div class="hero-title">Secure and Resilient Cyber-Physical Systems · Polar Codes · UAV Systems · AI/ML</div>
+        <p class="hero-summary">
+          Researcher working at the intersection of control theory, physical-layer security, coding theory, chaotic encryption, cloud control systems, and intelligent autonomous systems.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:yasiralibit@gmail.com">Contact by Email</a>
+          <a class="button secondary" href="#publications">View Publications</a>
+          <a class="button gold" href="#projects">Funded Projects</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Contact and profile links">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-item"><span class="contact-icon">@</span><div><strong>Email</strong><br><a href="mailto:yasiralibit@gmail.com">yasiralibit@gmail.com</a></div></div>
+          <div class="contact-item"><span class="contact-icon">☎</span><div><strong>Phone / WhatsApp</strong><br><a href="tel:+8618813060503">+86-188-13060503</a></div></div>
+          <div class="contact-item"><span class="contact-icon">微</span><div><strong>WeChat</strong><br>dryasirali</div></div>
+          <div class="contact-item"><span class="contact-icon">⌖</span><div><strong>Location</strong><br>Zhengzhou, Henan, China</div></div>
+        </div>
+        <div class="profile-links">
+          <a href="https://orcid.org/0000-0003-3998-9218" target="_blank" rel="noopener noreferrer">ORCID</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=sMtnz_YAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://ieeexplore.ieee.org/author/948811808693085" target="_blank" rel="noopener noreferrer">IEEE Author Profile</a>
+          <a href="https://www.linkedin.com/in/yasir-ali-48192675/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://dryasirali.github.io/resume.github.io/" target="_blank" rel="noopener noreferrer">Web CV</a>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <div class="metrics" aria-label="Academic highlights">
+    <div class="metric-card"><div class="number">12</div><div class="label">Selected journal publications</div></div>
+    <div class="metric-card"><div class="number">6</div><div class="label">Selected conference papers</div></div>
+    <div class="metric-card"><div class="number">4</div><div class="label">Funded research projects</div></div>
+    <div class="metric-card"><div class="number">4</div><div class="label">Languages</div></div>
+  </div>
+
+  <main id="main">
+    <section id="profile">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Research profile</div>
+          <h2>Secure and resilient cyber-physical systems</h2>
+        </div>
+        <p class="section-note">Bridging control theory, physical-layer security, coding theory, and intelligent autonomous systems.</p>
+      </div>
+      <div class="summary-card">
+        <p>
+          My research focuses on secure and resilient cyber-physical systems, with emphasis on communication security, resilient control, networked control systems, Polar Codes, UAV systems, chaotic encryption, and AI/ML-enabled optimization. My work bridges control theory, physical-layer security, coding theory, and intelligent autonomous systems, with publications in leading journals including IEEE Transactions and Elsevier journals.
+        </p>
+        <div class="tags">
+          <span class="tag">Secure & Resilient CPSs</span>
+          <span class="tag">Cloud Control Systems</span>
+          <span class="tag">Polar Codes</span>
+          <span class="tag">UAV Systems</span>
+          <span class="tag">Chaotic Encryption</span>
+          <span class="tag">AI/ML Optimization</span>
+          <span class="tag">Networked Control Systems</span>
+          <span class="tag">Physical-Layer Security</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Academic background</div>
+          <h2>Education</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <article class="item">
+          <div class="item-top"><div><h3>Ph.D. in Control Science and Engineering</h3><div class="meta"><a href="https://www.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Beijing Institute of Technology</a>, China · School of Automation</div></div><div class="date">2018.09 – 2024.06</div></div>
+          <p><strong>Thesis:</strong> Enhancing Physical Layer Communications and Security in Optimized CCSs. <strong>Adviser:</strong> Professor Yuanqing Xia, Fellow, IEEE.</p>
+        </article>
+        <article class="item">
+          <div class="item-top"><div><h3>M.S. in Control Science and Engineering</h3><div class="meta"><a href="https://www.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Beijing Institute of Technology</a>, China · School of Automation</div></div><div class="date">2015.09 – 2017.07</div></div>
+          <p><strong>Thesis:</strong> A Detection and Mitigation Approach for CCSs against DDoS Attack. <strong>Adviser:</strong> Professor Yuanqing Xia, Fellow, IEEE.</p>
+        </article>
+        <article class="item">
+          <div class="item-top"><div><h3>B.Sc. in Electrical Engineering</h3><div class="meta"><a href="https://www.uetpeshawar.edu.pk/" target="_blank" rel="noopener noreferrer">University of Engineering and Technology, Peshawar</a> · Department of Electrical Communication Engineering</div></div><div class="date">2009.09 – 2014.09</div></div>
+          <p><strong>Thesis:</strong> Ultrasonic Radar System. <strong>Adviser:</strong> Assistant Professor Sahib Khan.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Professional background</div>
+          <h2>Employment history</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <article class="item">
+          <div class="item-top"><div><h3>Postdoctoral Researcher</h3><div class="meta"><a href="https://zhengzhou.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Zhengzhou Research Institute, Beijing Institute of Technology</a></div></div><div class="date">2024.10 – Present</div></div>
+          <p>Postdoctoral research focused on secure and resilient CPSs, integrating Polar Codes, UAV systems, chaotic systems, and AI/ML techniques to improve communication security, reliability, and system resilience.</p>
+        </article>
+        <article class="item">
+          <div class="item-top"><div><h3>Visiting Scholar</h3><div class="meta"><a href="https://www.polsl.pl/en/" target="_blank" rel="noopener noreferrer">Silesian University of Technology</a>, Gliwice, Poland</div></div><div class="date">2021.10 – 2024.09</div></div>
+          <p>Worked as a full-time researcher and instructor at the Faculty of Automatic Control, Electronics and Computer Science. Contributed to undergraduate teaching and advanced research, leading to high-impact publications in IEEE TII and TNNLS.</p>
+        </article>
+        <article class="item">
+          <div class="item-top"><div><h3>Electrical Engineer</h3><div class="meta"><a href="https://saifgroup.com/" target="_blank" rel="noopener noreferrer">Power Plant, Saif Textile Mill Limited</a>, Gadoon, KP, Pakistan</div></div><div class="date">2014.12 – 2015.08</div></div>
+          <p>Installed and commissioned Caterpillar Gas Gensets, a Diesel Genset, and a Waste Heat Recovery Boiler; maintained, operated, and repaired 11kV HT and 440V LT VCBs, OCBs, and other electrical systems.</p>
+        </article>
+        <article class="item">
+          <div class="item-top"><div><h3>Internship</h3><div class="meta"><a href="https://www.rcm.com.pk/" target="_blank" rel="noopener noreferrer">Rahman Cotton Mill Takht Bhai Pvt. Ltd.</a>, KP, Pakistan</div></div><div class="date">2014.09 – 2014.12</div></div>
+          <p>Learned about AC and DC motors and gained practical industrial electrical work experience.</p>
+        </article>
+        <article class="item">
+          <div class="item-top"><div><h3>Internship</h3><div class="meta"><a href="https://pedokp.gov.pk/Main/psp/44" target="_blank" rel="noopener noreferrer">Malakand Hydro Power Complex (Malakand-III)</a>, KP, Pakistan</div></div><div class="date">2013.08 – 2013.10</div></div>
+          <p>Gained hands-on experience with power plant layout, equipment, subsystems, operation methodology, and electrical maintenance techniques.</p>
+        </article>
+        <article class="item">
+          <div class="item-top"><div><h3>Internship</h3><div class="meta"><a href="https://ptcl.com.pk/" target="_blank" rel="noopener noreferrer">Pakistan Telecommunication Company Limited</a></div></div><div class="date">2013.06 – 2013.08</div></div>
+          <p>Worked with digital exchanges, OMCs/NMCs, CDAS, trunk booking, and telecom system quality assurance.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Research output</div>
+          <h2>Selected publications</h2>
+        </div>
+        <p class="section-note">DOI links open in a new tab where available.</p>
+      </div>
+
+      <h3 class="subhead">Selected journal publications</h3>
+      <div class="pub-list">
+        <article class="pub-card"><div class="pub-title">[J1] Efficient Multi-Dimensional Pipelined Chaotic Bulk-Codewords-Encryption for Cloud Control Systems</div><div class="pub-details"><strong>Yasir Ali</strong>, T. Manzoor, H. Yang, L. You, R. Ma, C. Yan, T. Wang, and Y. Xia, Fellow, IEEE · <em>IEEE Transactions on Cybernetics</em>, 55, 5014–5026 (2025)</div><div class="pub-actions"><span class="badge if">Impact Factor 10.5</span><a class="doi-link" href="https://doi.org/10.1109/TCYB.2025.3579036" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J2] Chaos Encryption-Based Secure Polar Coding for Network-Oriented Cloud Control System</div><div class="pub-details"><strong>Yasir Ali</strong>, Y. Xia, W. Sułek, and T. Manzoor · <em>IEEE Transactions on Industrial Informatics</em>, 20, 3935–3947 (2023)</div><div class="pub-actions"><span class="badge if">Impact Factor 9.9</span><a class="doi-link" href="https://doi.org/10.1109/TII.2023.3316217" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J3] Artificial Intelligence Driven Channel Coding and Resource Optimization for Wireless Networks</div><div class="pub-details"><strong>Yasir Ali</strong>, T. Manzoor, H. Yang, and Y. Xia, Fellow, IEEE · <em>Computer Science Review</em> (Accepted)</div><div class="pub-actions"><span class="badge accepted">Accepted</span><span class="badge if">Impact Factor 12.7</span></div></article>
+        <article class="pub-card"><div class="pub-title">[J4] Resilient Output Feedback Tube-Based MPC for Cyber-Physical Systems Under Hybrid Attacks</div><div class="pub-details">H. Yang, Y. Ma, H. Xie, <strong>Yasir Ali</strong>, L. Dai, and Y. Xia, Fellow, IEEE · <em>IEEE Transactions on Circuits and Systems I: Regular Papers</em></div><div class="pub-actions"><span class="badge if">Impact Factor 5.2</span><a class="doi-link" href="https://doi.org/10.1109/TCSI.2025.3597736" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J5] Compound Learning-Based Model Predictive Control Approach for Ducted-Fan Aerial Vehicles</div><div class="pub-details">T. Manzoor, H. Pei, Z. Sun, and <strong>Yasir Ali</strong> · <em>IEEE Transactions on Neural Networks and Learning Systems</em>, 36, 9395–9407 (2024)</div><div class="pub-actions"><span class="badge if">Impact Factor 8.9</span><a class="doi-link" href="https://doi.org/10.1109/TNNLS.2024.3422401" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J6] QORA: Neural-Enhanced Interference-Aware Resource Provisioning for Serverless Computing</div><div class="pub-details">R. Ma, Y. Zhan, C. Wu, Z. Hong, <strong>Yasir Ali</strong>, and X. Yuanqing, Fellow, IEEE · <em>IEEE Transactions on Automation Science and Engineering</em>, 22, 10609–10624 (2025)</div><div class="pub-actions"><span class="badge if">Impact Factor 6.4</span><a class="doi-link" href="https://doi.org/10.1109/TASE.2025.3526197" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J7] Efficient Hardware Realization of SC Polar Decoders Using Compound Pipelined Processing Units and Auxiliary Registers</div><div class="pub-details"><strong>Yasir Ali</strong>, Y. Xia, Fellow, IEEE, T. Manzoor, S. Ali, M. Abouhawwash, S. S. Askar, A. K. Kumar, Member, IEEE, and R. Ma · <em>IEEE Access</em>, 12, 23808–23826 (2024)</div><div class="pub-actions"><span class="badge if">Impact Factor 3.6</span><a class="doi-link" href="https://doi.org/10.1109/ACCESS.2024.3364384" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J8] Secure Design For Cloud Control System Against Distributed Denial of Service Attack</div><div class="pub-details"><strong>Yasir Ali</strong>, Y. Xia, L. Ma, and A. Hammad · <em>Control Theory and Technology</em>, 16, 14–24 (2018)</div><div class="pub-actions"><span class="badge if">Impact Factor 1.5</span><a class="doi-link" href="https://doi.org/10.1007/s11768-018-8002-8" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J9] Reliability Weight-Based Extended Puncturing Mechanism for Polar Codes Using Translation Shift</div><div class="pub-details"><strong>Yasir Ali</strong> and Y. Xia · <em>Transactions on Emerging Telecommunications Technologies</em>, 35, e4923 (2024)</div><div class="pub-actions"><span class="badge if">Impact Factor 2.5</span><a class="doi-link" href="https://doi.org/10.1002/ett.4923" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J10] Artificial Intelligent and Internet of Things Framework for Sustainable Hazardous Waste Management in Hospitals</div><div class="pub-details">A. K. Kumar, <strong>Yasir Ali</strong>, R. R. Kumar, M. H. Assaf, and S. Ilyas · <em>Waste Management</em>, 203, 114816 (2025)</div><div class="pub-actions"><span class="badge if">Impact Factor 7.1</span><a class="doi-link" href="https://doi.org/10.1016/j.wasman.2025.114816" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J11] Flight Control Techniques and Classification of Ducted Fan Aerial Vehicles</div><div class="pub-details">T. Manzoor, Y. Xia, <strong>Yasir Ali</strong>, and K. Hussain · <em>Control Theory and Application</em>, 39(2), 201–221 (EI)</div><div class="pub-actions"><span class="badge">Indexed: EI</span><a class="doi-link" href="https://doi.org/10.7641/CTA.2021.00779" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[J12] Numerical Study of Double Droplet Impacts on Heated Films: Influence of Film Thickness and Temperature on Crown and Jet Dynamics</div><div class="pub-details">M. Mohasan, M. Song, S. M. A. Naqvi, S. Zhou, M. Hamid, and <strong>Yasir Ali</strong> · <em>Meccanica</em>, Vol. 61, Article No. 48 (2026)</div><div class="pub-actions"><span class="badge if">Impact Factor 2.1</span></div></article>
+      </div>
+
+      <h3 class="subhead">Selected conference publications</h3>
+      <div class="pub-list">
+        <article class="pub-card"><div class="pub-title">[C1] Solutions Verification for Cloud-Based Networked Control System Using Karush-Kuhn-Tucker Conditions</div><div class="pub-details"><strong>Yasir Ali</strong>, Z. Shen, F. Zhu, G. Xiong, S. Chen, Y. Xia, and Y. Wang · Chinese Automation Congress, Xi’an, China, 2018</div><div class="pub-actions"><a class="doi-link" href="https://doi.org/10.1109/CAC.2018.8623109" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[C2] Measurement Analysis of Error Rate for Belief’s Clipping and Quantization in Polar Codes</div><div class="pub-details"><strong>Yasir Ali</strong> and W. Sułek · Radiocommunication and ICT Conference, Krakow, Poland, 2023</div><div class="pub-actions"><a class="doi-link" href="https://doi.org/10.15199/59.2023.4.17" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[C3] A Stabilizing Architecture for Cloud Control System Against DDoS Attack</div><div class="pub-details"><strong>Yasir Ali</strong>, Y. Xia, and L. Ma · Chinese Automation Conference, Jinan, China, 2017</div><div class="pub-actions"><a class="doi-link" href="https://doi.org/10.1109/CAC.2017.8243372" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[C4] Interless: Interference-Aware Deep Resource Prediction for Serverless Computing</div><div class="pub-details">R. Ma, Y. Zhan, T. Yan, Y. Xia, and <strong>Yasir Ali</strong> · 36th Chinese Control and Decision Conference, Xi’an, China, 2024</div><div class="pub-actions"><a class="doi-link" href="https://doi.org/10.1109/CCDC62350.2024.10588201" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[C5] Engineering Problems in Initial Phase of Cloud Control System</div><div class="pub-details">L. Ma, Y. Xia, <strong>Yasir Ali</strong>, and Y. Zhan · 36th Chinese Control Conference, Dalian, China, 2017</div><div class="pub-actions"><a class="doi-link" href="https://doi.org/10.23919/ChiCC.2017.8028603" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[C6] Humanoid Robots Object Grasping and Manipulation Learning by Demonstration</div><div class="pub-details">H. Ahmad, X. Yao, M. Muddassir, J. Chiragh, and <strong>Yasir Ali</strong> · 3rd International Conference on Control, Automation and Robotics, Nagoya, Japan, 2017</div><div class="pub-actions"><a class="doi-link" href="https://doi.org/10.1109/ICCAR.2017.7942678" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
+      </div>
+
+      <h3 class="subhead">Ongoing work</h3>
+      <div class="pub-list">
+        <article class="pub-card"><div class="pub-title">[SJ1] Authenticated ECDH-Driven Chaotic Packet Protection for Resilient Cloud Control Systems</div><div class="pub-details"><strong>Yasir Ali</strong>, T. Manzoor, L. Dai, and Y. Xia · <em>IEEE Transactions on Cybernetics</em> (Under review)</div><div class="pub-actions"><span class="badge review">Under review</span><span class="badge if">Impact Factor 10.5</span></div></article>
+        <article class="pub-card"><div class="pub-title">[SJ2] Reliability-Aware Adaptive CRC-Aided Polar Decoding With Configurable Effort Control</div><div class="pub-details"><strong>Yasir Ali</strong> · <em>IEEE Transactions on Communications</em> (Under review)</div><div class="pub-actions"><span class="badge review">Under review</span><span class="badge if">Impact Factor 8.3</span></div></article>
+        <article class="pub-card"><div class="pub-title">[SJ3] Cyber-Physical Safety Capsule for Cloud-Controlled UAVs Under Availability and Integrity Attacks</div><div class="pub-details"><strong>Yasir Ali</strong>, T. Manzoor, M. M, and Y. Xia · <em>ACM Transactions on Cyber-Physical Systems</em> (Under review)</div><div class="pub-actions"><span class="badge review">Under review</span><span class="badge if">Impact Factor 2.9</span></div></article>
+        <article class="pub-card"><div class="pub-title">[SJ4] Towards Efficient and Secure Cloud Control Systems: Advances, Challenges, and Future Directions</div><div class="pub-details"><strong>Yasir Ali</strong>, T. Manzoor, H. Yang, A. Ali, and Y. Xia · <em>Annual Reviews in Control</em> (Under review)</div><div class="pub-actions"><span class="badge review">Under review</span><span class="badge if">Impact Factor 10.7</span></div></article>
+        <article class="pub-card"><div class="pub-title">[SJ5] Physics-Informed Sparse Identification-Based Tube Model Predictive Control for Aerial Vehicles</div><div class="pub-details">T. Manzoor, <strong>Yasir Ali</strong>, Y. Xia, L. You, and Y. Wang · <em>Engineering Applications of Artificial Intelligence</em> (Under review)</div><div class="pub-actions"><span class="badge review">Under review</span><span class="badge if">Impact Factor 8.0</span><a class="doi-link" href="https://doi.org/10.48550/arXiv.2605.23354" target="_blank" rel="noopener noreferrer">arXiv DOI</a></div></article>
+        <article class="pub-card"><div class="pub-title">[SJ6] Event-Sensory-Feedback Approach to Distributed Attack Isolation in Resilient Output Consensus</div><div class="pub-details">C. Yan, W. Zhang, L. Yan, B. Dong, Q. Wang, <strong>Yasir Ali</strong>, and Yuanqing Xia, Fellow, IEEE · <em>IEEE Transactions on Cybernetics</em> (Under review)</div><div class="pub-actions"><span class="badge review">Under review</span><span class="badge if">Impact Factor 10.5</span></div></article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Research leadership</div>
+          <h2>Research grants and projects</h2>
+        </div>
+      </div>
+      <div class="project-grid">
+        <article class="project-card"><div class="grant">Principal Investigator</div><h3>National Natural Science Foundation of China (NSFC)</h3><p><strong>2026.01 – 2026.12</strong> · Grant No. W2533176 · RMB 200,000 · Research Fund for International Young Scientists.</p></article>
+        <article class="project-card"><div class="grant">Principal Investigator</div><h3>Beijing Natural Science Foundation (BJNSF)</h3><p><strong>2026.01 – 2026.12</strong> · Grant No. IS25064 · RMB 200,000 · International Scholars category.</p></article>
+        <article class="project-card"><div class="grant">Selected high-level foreign expert</div><h3>High-end Foreign Experts Project of Henan Province</h3><p><strong>2025.12 – 2026.09</strong> · Grant No. HNGD2026007 · RMB 150,000 · Fully funded 10-month research program.</p></article>
+        <article class="project-card"><div class="grant">Principal Investigator</div><h3>Henan Postdoctoral Foundation Research Fund</h3><p><strong>2026.01 – 2026.12</strong> · Grant No. HN2026058 · RMB 100,000 · Henan Postdoctoral Research Funding Scheme.</p></article>
+      </div>
+    </section>
+
+    <section id="honors">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Recognition</div>
+          <h2>Honors and awards</h2>
+        </div>
+      </div>
+      <div class="award-list">
+        <article class="award-card"><div class="award-date">2025.12 – 2028.09</div><div><h3>Senior Professional Title — Associate Researcher</h3><p>Awarded the Natural Science Research Series Senior Professional Title of Associate Researcher in Henan Province, China.</p></div></article>
+        <article class="award-card"><div class="award-date">2018.09 – 2019.07</div><div><h3>Best Paper Award</h3><p>Awarded by <em>Control Theory and Technology</em> for an outstanding research article published in the 2018–2019 volume.</p></div></article>
+        <article class="award-card"><div class="award-date">2015.09 – 2023.07</div><div><h3>Chinese Government Scholarship</h3><p>Competitive scholarship supporting full tuition and living expenses for Master’s and Doctoral studies in Beijing.</p></div></article>
+        <article class="award-card"><div class="award-date">2011.03 – 2012.04</div><div><h3>Academic Excellence Award</h3><p>Awarded by the Khyber Pakhtunkhwa Provincial Government for achieving a cumulative score of 80% across Bachelor’s examinations.</p></div></article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Capabilities</div>
+          <h2>Technical skills</h2>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="mini-card"><h3>Programming</h3><ul><li>C and C++</li><li>Python</li></ul></div>
+        <div class="mini-card"><h3>Numerical analysis and optimization</h3><ul><li>MATLAB, YALMIP, CasADi, OSQP</li><li>Octave</li></ul></div>
+        <div class="mini-card"><h3>Hardware design</h3><ul><li>FPGA design with VHDL and Verilog</li></ul></div>
+        <div class="mini-card"><h3>Instrumentation and control</h3><ul><li>LabVIEW</li><li>Simulink</li></ul></div>
+        <div class="mini-card"><h3>Drafting and productivity</h3><ul><li>LaTeX, Microsoft Office, WPS</li><li>Inkscape, FreeCAD</li></ul></div>
+        <div class="mini-card"><h3>Operating systems</h3><ul><li>Windows</li><li>Ubuntu</li><li>macOS</li></ul></div>
+      </div>
+    </section>
+
+    <section id="languages">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Communication</div>
+          <h2>Language competencies</h2>
+        </div>
+      </div>
+      <div class="language-grid">
+        <div class="language-card"><h3>English</h3><p>Excellent</p></div>
+        <div class="language-card"><h3>Urdu</h3><p>Excellent</p></div>
+        <div class="language-card"><h3>Chinese</h3><p>Fair level</p></div>
+        <div class="language-card"><h3>Polish</h3><p>Basic level</p></div>
+      </div>
+    </section>
+
+    <section id="references">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Academic contacts</div>
+          <h2>References</h2>
+        </div>
+      </div>
+      <div class="reference-grid">
+        <article class="reference-card"><h3><a href="https://ieeexplore.ieee.org/author/37293555300" target="_blank" rel="noopener noreferrer">Professor Yuanqing Xia</a></h3><p>Fellow, IEEE; Professor<br>Beijing Institute of Technology</p><a href="mailto:xia_yuanqing@bit.edu.cn">xia_yuanqing@bit.edu.cn</a></article>
+        <article class="reference-card"><h3><a href="https://ieeexplore.ieee.org/author/37089468569" target="_blank" rel="noopener noreferrer">Dr. Tayyab Manzoor</a></h3><p>Faculty Member<br>Zhongyuan University of Technology</p><a href="mailto:tayyab@zut.edu.cn">tayyab@zut.edu.cn</a></article>
+        <article class="reference-card"><h3><a href="https://ieeexplore.ieee.org/author/38520916800" target="_blank" rel="noopener noreferrer">Dr. Zhai Di-Hua</a></h3><p>Associate Professor<br>Beijing Institute of Technology</p><a href="mailto:zhaidih@bit.edu.cn">zhaidih@bit.edu.cn</a></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p><strong>Dr. Yasir Ali</strong> · Postdoctoral Researcher · Secure and Resilient Cyber-Physical Systems</p>
+      <p>For collaborations and academic inquiries, contact <a href="mailto:yasiralibit@gmail.com">yasiralibit@gmail.com</a>. Last updated: 2026.</p>
+    </div>
+  </footer>
 </body>
 </html>
