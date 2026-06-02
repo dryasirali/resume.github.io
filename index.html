@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Yasir Ali | Secure & Resilient Cyber-Physical Systems</title>
+  <title>Dr. Yasir Ali | Cyber-Physical Systems, Coding & Intelligent Control</title>
 
-  <meta name="description" content="Dr. Yasir Ali is a Postdoctoral Researcher working on secure and resilient cyber-physical systems, Polar Codes, UAV systems, chaotic encryption, cloud control systems, and AI/ML-enabled optimization." />
+  <meta name="description" content="Dr. Yasir Ali is a Postdoctoral Researcher in Intelligent Science and Technology working on cyber-physical systems, Polar Codes, UAV systems, chaotic encryption, cloud control systems, and AI/ML-enabled optimization." />
   <meta name="keywords" content="Yasir Ali, cyber-physical systems, secure CPS, resilient CPS, Polar Codes, UAVs, chaotic encryption, cloud control systems, networked control systems, AI, machine learning, control science, Beijing Institute of Technology" />
   <meta name="author" content="Dr. Yasir Ali" />
   <meta name="theme-color" content="#0f2742" />
 
   <style>
     :root{
-      --navy:#0f2742;
-      --navy-2:#14395e;
+      --navy:#10233f;
+      --navy-2:#183b63;
       --ink:#172033;
-      --muted:#667085;
-      --muted-2:#8792a2;
-      --line:#e6eaf0;
+      --muted:#5e6878;
+      --muted-2:#818a99;
+      --line:#dfe5ec;
       --paper:#ffffff;
-      --soft:#f6f8fb;
-      --soft-2:#eef3f8;
-      --gold:#b48a2c;
-      --gold-soft:#fff6df;
-      --blue:#1f6feb;
+      --soft:#f7f9fc;
+      --soft-2:#edf2f7;
+      --gold:#a77819;
+      --gold-soft:#fff7e6;
+      --blue:#0f66c2;
+      --teal:#21b8aa;
       --green:#117865;
       --red:#b42318;
-      --shadow:0 18px 50px rgba(15,39,66,.09);
-      --shadow-soft:0 10px 28px rgba(15,39,66,.07);
-      --radius:20px;
-      --radius-sm:14px;
+      --shadow:0 18px 42px rgba(16,35,63,.08);
+      --shadow-soft:0 10px 24px rgba(16,35,63,.06);
+      --radius:8px;
+      --radius-sm:8px;
       --max:1180px;
     }
 
@@ -40,9 +41,11 @@
       font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height:1.65;
       background:
-        radial-gradient(circle at top left, rgba(180,138,44,.16), transparent 33rem),
-        linear-gradient(180deg, #f9fbfd 0%, #eef3f8 100%);
+        linear-gradient(90deg, rgba(16,35,63,.035) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfcfe 0%, #f1f5f9 100%);
+      background-size:48px 48px, auto;
       min-height:100vh;
+      overflow-x:hidden;
     }
 
     a{color:var(--blue);text-decoration:none}
@@ -56,7 +59,8 @@
     .skip-link:focus{left:12px}
 
     .site-header{
-      background:linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 62%, #1d4d78 100%);
+      background:
+        linear-gradient(135deg, rgba(16,35,63,.98) 0%, rgba(24,59,99,.98) 72%, rgba(25,82,121,.98) 100%);
       color:#fff;
       border-bottom:1px solid rgba(255,255,255,.14);
       position:relative;
@@ -66,8 +70,10 @@
       content:"";
       position:absolute;inset:0;
       background:
-        radial-gradient(circle at 18% 12%, rgba(255,255,255,.18), transparent 24rem),
-        radial-gradient(circle at 82% 18%, rgba(180,138,44,.30), transparent 22rem);
+        linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size:54px 54px;
+      mask-image:linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.28));
       pointer-events:none;
     }
 
@@ -76,8 +82,9 @@
       top:0;
       z-index:50;
       backdrop-filter:blur(18px);
-      background:rgba(15,39,66,.93);
+      background:rgba(16,35,63,.94);
       border-bottom:1px solid rgba(255,255,255,.12);
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
     .nav{
       max-width:var(--max);margin:0 auto;padding:12px 24px;
@@ -87,60 +94,70 @@
       display:flex;align-items:center;gap:10px;color:#fff;font-weight:780;letter-spacing:.01em;
     }
     .brand-mark{
-      width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
-      background:linear-gradient(135deg, var(--gold), #f0d28a);color:#0f2742;font-weight:900;
-      box-shadow:0 8px 24px rgba(0,0,0,.18);
+      width:34px;height:34px;border-radius:8px;display:grid;place-items:center;
+      background:#fff;color:var(--navy);font-weight:900;
+      box-shadow:inset 0 -3px 0 var(--gold), 0 8px 24px rgba(0,0,0,.16);
     }
     .nav-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
     .nav-links a{
-      color:rgba(255,255,255,.84);font-size:.91rem;font-weight:650;padding:7px 10px;border-radius:999px;
+      color:rgba(255,255,255,.84);font-size:.91rem;font-weight:650;padding:7px 10px;border-radius:8px;
     }
     .nav-links a:hover{background:rgba(255,255,255,.10);color:#fff;text-decoration:none}
 
     .hero{
-      position:relative;max-width:var(--max);margin:0 auto;padding:72px 24px 58px;
-      display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center;
+      position:relative;max-width:var(--max);margin:0 auto;padding:86px 24px 72px;
+      display:grid;grid-template-columns:1.06fr .94fr;gap:52px;align-items:center;
     }
-    .eyebrow{
-      display:inline-flex;align-items:center;gap:8px;
-      color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
-      border-radius:999px;padding:7px 12px;font-size:.86rem;font-weight:700;margin-bottom:18px;
-    }
-    .eyebrow span{width:7px;height:7px;border-radius:50%;background:#5eead4;box-shadow:0 0 0 5px rgba(94,234,212,.12)}
+    .hero > *{min-width:0}
     h1{
-      font-size:clamp(2.55rem, 5vw, 5rem);
-      line-height:.98;letter-spacing:-.055em;margin-bottom:18px;
+      font-size:clamp(2.55rem, 5vw, 4.9rem);
+      line-height:1;letter-spacing:0;margin-bottom:14px;
+    }
+    .role-line{
+      color:#fff;font-size:clamp(1.08rem,1.45vw,1.26rem);font-weight:780;line-height:1.42;margin-bottom:3px;
+      overflow-wrap:anywhere;
+    }
+    .affiliation{
+      color:rgba(255,255,255,.72);font-size:.98rem;font-weight:640;margin-bottom:22px;
+      overflow-wrap:anywhere;
     }
     .hero-title{
-      color:#dfe9f6;font-size:clamp(1.05rem,1.5vw,1.32rem);font-weight:700;margin-bottom:20px;
+      color:#dfe9f6;font-size:clamp(1.02rem,1.35vw,1.2rem);font-weight:760;margin-bottom:20px;
+      overflow-wrap:anywhere;
     }
     .hero-summary{
       color:rgba(255,255,255,.82);font-size:1.06rem;max-width:720px;margin-bottom:28px;
+      overflow-wrap:anywhere;
     }
     .hero-actions,.profile-links{display:flex;flex-wrap:wrap;gap:11px;align-items:center}
+    .hero-actions{gap:10px}
     .button{
       display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      border-radius:999px;padding:11px 16px;font-weight:780;font-size:.94rem;border:1px solid transparent;
+      border-radius:8px;padding:11px 14px;font-weight:780;font-size:.92rem;border:1px solid transparent;
       transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
     }
+    .button svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.15;fill:none;stroke-linecap:round;stroke-linejoin:round}
     .button:hover{transform:translateY(-1px);text-decoration:none}
     .button.primary{background:#fff;color:var(--navy);box-shadow:0 12px 30px rgba(0,0,0,.16)}
     .button.secondary{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.22);color:#fff}
     .button.secondary:hover{background:rgba(255,255,255,.16)}
-    .button.gold{background:var(--gold);color:#111827;box-shadow:0 12px 30px rgba(180,138,44,.22)}
+    .button.gold{background:var(--gold);color:#fff;box-shadow:0 12px 30px rgba(167,120,25,.22)}
 
     .hero-card{
-      background:rgba(255,255,255,.95);color:var(--ink);border:1px solid rgba(255,255,255,.45);
-      border-radius:28px;padding:26px;box-shadow:0 28px 80px rgba(0,0,0,.20);
+      background:rgba(255,255,255,.96);color:var(--ink);border:1px solid rgba(255,255,255,.55);
+      border-top:4px solid var(--gold);border-radius:8px;padding:28px;box-shadow:0 28px 80px rgba(0,0,0,.20);
       backdrop-filter:blur(16px);
+      min-width:0;
     }
     .hero-card h2{font-size:1.05rem;color:var(--navy);letter-spacing:.03em;text-transform:uppercase;margin-bottom:14px}
     .contact-grid{display:grid;gap:12px;margin-bottom:20px}
-    .contact-item{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;color:#3f4a5a;font-size:.96rem}
-    .contact-icon{width:30px;height:30px;border-radius:10px;background:var(--soft-2);display:grid;place-items:center;color:var(--navy);font-weight:800}
+    .contact-item{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start;color:#3f4a5a;font-size:.96rem}
+    .contact-icon{width:30px;height:30px;border-radius:8px;background:#eef5fb;display:grid;place-items:center;color:var(--navy);font-weight:800}
+    .contact-icon svg{width:17px;height:17px;stroke:currentColor;stroke-width:2.15;fill:none;stroke-linecap:round;stroke-linejoin:round}
     .profile-links a{
-      display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--soft);color:var(--navy);
-      padding:8px 11px;border-radius:999px;font-weight:760;font-size:.88rem;
+      display:inline-flex;align-items:center;gap:7px;border:1px solid #cfe2ff;background:#f8fbff;color:var(--blue);
+      padding:8px 11px;border-radius:8px;font-weight:760;font-size:.88rem;
+      min-width:0;max-width:100%;text-align:center;white-space:normal;line-height:1.25;
     }
     .profile-links a:hover{background:var(--navy);color:#fff;text-decoration:none;border-color:var(--navy)}
 
@@ -150,7 +167,9 @@
     }
     .metric-card{
       background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 18px 16px;box-shadow:var(--shadow-soft);
+      border-top:3px solid var(--gold);position:relative;overflow:hidden;
     }
+    .metric-card::after{content:"";position:absolute;right:0;top:0;width:62px;height:62px;background:linear-gradient(135deg,rgba(167,120,25,.13),transparent 64%)}
     .metric-card .number{font-size:1.72rem;font-weight:900;color:var(--navy);line-height:1;margin-bottom:5px}
     .metric-card .label{font-size:.88rem;color:var(--muted);font-weight:680}
 
@@ -166,38 +185,39 @@
     .section-note{color:var(--muted);font-size:.94rem;max-width:520px;text-align:right}
 
     .summary-card{
-      background:linear-gradient(180deg, var(--soft) 0%, #fff 100%);border:1px solid var(--line);border-radius:18px;padding:24px;
+      background:linear-gradient(180deg, var(--soft) 0%, #fff 100%);border:1px solid var(--line);border-radius:8px;padding:24px;
     }
     .summary-card p{font-size:1.02rem;color:#3a4554;margin-bottom:0}
     .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
     .tag{
-      border:1px solid #d7e2ef;background:#f8fbff;color:#173b60;padding:7px 11px;border-radius:999px;font-size:.87rem;font-weight:720;
+      border:1px solid #d7e2ef;background:#f8fbff;color:#173b60;padding:7px 11px;border-radius:8px;font-size:.87rem;font-weight:720;
     }
 
     .timeline{display:grid;gap:16px}
     .item{
       position:relative;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#fbfcfe 100%);
-      border-radius:16px;padding:20px 20px 18px 22px;box-shadow:0 6px 18px rgba(15,39,66,.04);
+      border-radius:8px;padding:20px 20px 18px 22px;box-shadow:0 6px 18px rgba(15,39,66,.04);
     }
     .item::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:4px;border-radius:0 999px 999px 0;background:var(--gold)}
     .item-top{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:8px}
     .item h3{font-size:1.08rem;color:#141c2f;line-height:1.32;margin-bottom:3px}
     .meta{color:var(--blue);font-weight:720;font-size:.94rem}
-    .date{flex:0 0 auto;color:var(--navy);background:var(--soft-2);border:1px solid #d9e4ef;border-radius:999px;padding:5px 10px;font-size:.84rem;font-weight:800;white-space:nowrap}
+    .date{flex:0 0 auto;color:var(--navy);background:var(--soft-2);border:1px solid #d9e4ef;border-radius:8px;padding:5px 10px;font-size:.84rem;font-weight:800;white-space:nowrap}
     .item p{color:#4d5868;font-size:.96rem;margin-bottom:0}
+    .detail-line{display:block;margin-top:4px}
 
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .mini-card{
-      border:1px solid var(--line);border-radius:16px;background:#fff;padding:18px;box-shadow:0 6px 18px rgba(15,39,66,.04);
+      border:1px solid var(--line);border-radius:8px;background:#fff;padding:18px;box-shadow:0 6px 18px rgba(15,39,66,.04);
     }
     .mini-card h3{color:var(--navy);font-size:1.02rem;margin-bottom:6px}
     .mini-card p,.mini-card li{color:#4d5868;font-size:.94rem}
     .mini-card ul{list-style:none;display:grid;gap:8px;margin-top:10px}
-    .mini-card li::before{content:"•";color:var(--gold);font-weight:900;margin-right:8px}
+    .mini-card li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:9px;vertical-align:middle}
 
     .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .project-card{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff;position:relative;overflow:hidden}
+    .project-card{border:1px solid var(--line);border-radius:8px;padding:18px;background:#fff;position:relative;overflow:hidden}
     .project-card::after{content:"";position:absolute;top:0;right:0;width:72px;height:72px;background:linear-gradient(135deg,rgba(180,138,44,.18),transparent 65%)}
     .project-card .grant{font-size:.84rem;color:var(--green);font-weight:850;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
     .project-card h3{font-size:1.02rem;color:var(--navy);line-height:1.35;margin-bottom:8px}
@@ -205,7 +225,7 @@
 
     .pub-list{counter-reset:pub;display:grid;gap:12px}
     .pub-card{
-      border:1px solid var(--line);border-radius:16px;background:#fff;padding:17px 18px;display:grid;gap:8px;
+      border:1px solid var(--line);border-radius:8px;background:#fff;padding:17px 18px;display:grid;gap:8px;
       transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease;
     }
     .pub-card:hover{border-color:#bfd1e6;transform:translateY(-1px);box-shadow:0 10px 26px rgba(15,39,66,.08)}
@@ -213,7 +233,7 @@
     .pub-details{color:#535f70;font-size:.93rem}
     .pub-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
     .badge,.doi-link{
-      display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 9px;font-size:.78rem;font-weight:800;
+      display:inline-flex;align-items:center;gap:6px;border-radius:8px;padding:5px 9px;font-size:.78rem;font-weight:800;
     }
     .badge{background:var(--soft-2);color:#23476c;border:1px solid #d9e4ef}
     .badge.if{background:var(--gold-soft);border-color:#f0d99a;color:#6f4f04}
@@ -225,17 +245,17 @@
     .subhead:first-of-type{margin-top:0}
 
     .award-list{display:grid;gap:14px}
-    .award-card{display:grid;grid-template-columns:165px 1fr;gap:16px;border:1px solid var(--line);border-radius:16px;background:#fff;padding:17px}
-    .award-date{font-size:.86rem;font-weight:850;color:#7a5808;background:var(--gold-soft);border:1px solid #f0d99a;border-radius:12px;padding:8px 10px;height:max-content;text-align:center}
+    .award-card{display:grid;grid-template-columns:165px 1fr;gap:16px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:17px}
+    .award-date{font-size:.86rem;font-weight:850;color:#7a5808;background:var(--gold-soft);border:1px solid #f0d99a;border-radius:8px;padding:8px 10px;height:max-content;text-align:center}
     .award-card h3{font-size:1.02rem;color:#131c2e;margin-bottom:4px}
     .award-card p{color:#526073;font-size:.94rem;margin-bottom:0}
 
     .language-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .language-card{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}
+    .language-card{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:18px;text-align:center}
     .language-card h3{font-size:1rem;color:var(--navy);margin-bottom:4px}.language-card p{color:var(--muted);font-weight:720;margin-bottom:0}
 
     .reference-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .reference-card{border:1px solid var(--line);border-radius:16px;background:#fff;padding:20px;text-align:center;box-shadow:0 6px 18px rgba(15,39,66,.04)}
+    .reference-card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:20px;text-align:center;box-shadow:0 6px 18px rgba(15,39,66,.04)}
     .reference-card h3{font-size:1.05rem;color:var(--navy);margin-bottom:8px}.reference-card p{font-size:.93rem;color:#4d5868;margin-bottom:10px}
     .reference-card a{font-weight:760;font-size:.91rem}
 
@@ -248,7 +268,7 @@
       .hero{grid-template-columns:1fr;padding-top:44px}.metrics{grid-template-columns:repeat(2,1fr);margin-top:0}.grid-2,.project-grid,.reference-grid{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(2,1fr)}.section-note{text-align:left}.section-head{align-items:start;flex-direction:column}.nav{align-items:flex-start;flex-direction:column}.nav-links{justify-content:flex-start}.award-card{grid-template-columns:1fr}.language-grid{grid-template-columns:repeat(2,1fr)}
     }
     @media (max-width:640px){
-      .nav-links{display:none}.hero{padding:36px 18px}.hero-card,section{border-radius:16px;padding:22px}.metrics,main{padding-left:18px;padding-right:18px}.metrics,.grid-3,.language-grid{grid-template-columns:1fr}.item-top{flex-direction:column}.date{width:max-content}h1{font-size:2.7rem}.button{width:100%}.profile-links a{flex:1 1 auto;justify-content:center}
+      .nav-links{display:none}.hero{width:100%;max-width:100%;padding:42px 18px;overflow:hidden}.hero-card,section{width:100%;max-width:100%;padding:22px;overflow:hidden}.metrics,main{width:100%;max-width:100%;padding-left:18px;padding-right:18px}.metrics,.grid-3,.language-grid{grid-template-columns:1fr}.item-top{flex-direction:column}.date{width:max-content;max-width:100%;white-space:normal}h1{font-size:2.55rem}.button{width:100%}.role-line,.affiliation,.hero-title,.hero-summary,.contact-item div,.profile-links a{word-break:break-word;overflow-wrap:anywhere}.hero-title{font-size:1.02rem;line-height:1.45}.hero-summary{font-size:1rem}.profile-links a{flex:1 1 calc(50% - 11px);justify-content:center}
     }
     @media print{
       body{background:#fff;color:#000}.nav-wrap,.hero-actions,.profile-links,.footer{display:none}.site-header{background:#fff;color:#000}.hero{display:block;padding:0}.hero-card{box-shadow:none;border:1px solid #ccc}.metrics{margin:0;grid-template-columns:repeat(4,1fr);padding:0}.metric-card,section{box-shadow:none;break-inside:avoid}.site-header::before{display:none}a{color:#000;text-decoration:none}.doi-link{border:1px solid #999;background:#fff;color:#000}
@@ -278,32 +298,35 @@
   <header class="site-header" id="top">
     <div class="hero">
       <div>
-        <div class="eyebrow"><span></span> Postdoctoral Researcher · Control Science & Engineering</div>
         <h1>Yasir Ali, PhD</h1>
-        <div class="hero-title">Secure and Resilient Cyber-Physical Systems · Polar Codes · UAV Systems · AI/ML</div>
+        <p class="role-line">Postdoctoral Researcher · Intelligent Science &amp; Technology</p>
+        <p class="affiliation">Zhengzhou Research Institute, Beijing Institute of Technology</p>
+        <div class="hero-title">Secure and Resilient CPSs, Polar Code, Chaotic Systems, UAVs, AI/ML</div>
         <p class="hero-summary">
-          Researcher working at the intersection of control theory, physical-layer security, coding theory, chaotic encryption, cloud control systems, and intelligent autonomous systems.
+          I design communication, control, and optimization methods for dependable networked systems, with applications in cloud control, wireless coding, and autonomous platforms.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="mailto:yasiralibit@gmail.com">Contact by Email</a>
-          <a class="button secondary" href="#publications">View Publications</a>
-          <a class="button gold" href="#projects">Funded Projects</a>
+          <a class="button primary" href="mailto:yasiralibit@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Contact by Email</a>
+          <a class="button secondary" href="CV_YasirAli.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Download CV PDF</a>
+          <a class="button secondary" href="#publications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M8 7h8"/><path d="M8 11h7"/></svg>View Publications</a>
         </div>
       </div>
 
       <aside class="hero-card" aria-label="Contact and profile links">
         <h2>Contact</h2>
         <div class="contact-grid">
-          <div class="contact-item"><span class="contact-icon">@</span><div><strong>Email</strong><br><a href="mailto:yasiralibit@gmail.com">yasiralibit@gmail.com</a></div></div>
-          <div class="contact-item"><span class="contact-icon">☎</span><div><strong>Phone / WhatsApp</strong><br><a href="tel:+8618813060503">+86-188-13060503</a></div></div>
-          <div class="contact-item"><span class="contact-icon">微</span><div><strong>WeChat</strong><br>dryasirali</div></div>
-          <div class="contact-item"><span class="contact-icon">⌖</span><div><strong>Location</strong><br>Zhengzhou, Henan, China</div></div>
+          <div class="contact-item"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><div><strong>Personal Email</strong><br><a href="mailto:yasiralibit@gmail.com">yasiralibit@gmail.com</a></div></div>
+          <div class="contact-item"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><div><strong>Institutional Email</strong><br><a href="mailto:yasirali@bit.edu.cn">yasirali@bit.edu.cn</a></div></div>
+          <div class="contact-item"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6.5 6.5l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2Z"/></svg></span><div><strong>Phone / WhatsApp</strong><br><a href="tel:+8618813060503">+86-188-13060503</a></div></div>
+          <div class="contact-item"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10.5 17.5c-4.4 0-8-2.8-8-6.3s3.6-6.3 8-6.3 8 2.8 8 6.3-3.6 6.3-8 6.3Z"/><path d="M7.2 17.1 4.8 19l.7-3.1"/><path d="M14 18.8c1.1.7 2.5 1.1 4 1.1.5 0 1-.1 1.5-.2l2 1.4-.5-2.3c1.2-.9 2-2.1 2-3.5 0-2.1-1.8-3.9-4.3-4.6"/><path d="M7.8 10h.1"/><path d="M13.1 10h.1"/></svg></span><div><strong>WeChat</strong><br>dryasirali</div></div>
+          <div class="contact-item"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.2 7-12a7 7 0 0 0-14 0c0 6.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></span><div><strong>Location</strong><br>Zhengzhou, Henan, China</div></div>
         </div>
         <div class="profile-links">
           <a href="https://orcid.org/0000-0003-3998-9218" target="_blank" rel="noopener noreferrer">ORCID</a>
           <a href="https://scholar.google.com/citations?hl=en&user=sMtnz_YAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Google Scholar</a>
           <a href="https://ieeexplore.ieee.org/author/948811808693085" target="_blank" rel="noopener noreferrer">IEEE Author Profile</a>
           <a href="https://www.linkedin.com/in/yasir-ali-48192675/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="CV_YasirAli.pdf" target="_blank" rel="noopener noreferrer">PDF CV</a>
           <a href="https://dryasirali.github.io/resume.github.io/" target="_blank" rel="noopener noreferrer">Web CV</a>
         </div>
       </aside>
@@ -322,16 +345,15 @@
       <div class="section-head">
         <div>
           <div class="section-kicker">Research profile</div>
-          <h2>Secure and resilient cyber-physical systems</h2>
+          <h2>Security, coding, and control for intelligent systems</h2>
         </div>
-        <p class="section-note">Bridging control theory, physical-layer security, coding theory, and intelligent autonomous systems.</p>
       </div>
       <div class="summary-card">
         <p>
-          My research focuses on secure and resilient cyber-physical systems, with emphasis on communication security, resilient control, networked control systems, Polar Codes, UAV systems, chaotic encryption, and AI/ML-enabled optimization. My work bridges control theory, physical-layer security, coding theory, and intelligent autonomous systems, with publications in leading journals including IEEE Transactions and Elsevier journals.
+          My work centers on dependable cyber-physical and cloud-control systems. I combine physical-layer security, coding theory, chaotic encryption, resilient control, and AI/ML optimization to improve communication reliability, operational safety, and system robustness. This research has led to publications in leading IEEE Transactions and Elsevier journals.
         </p>
         <div class="tags">
-          <span class="tag">Secure & Resilient CPSs</span>
+          <span class="tag">Cyber-Physical Systems</span>
           <span class="tag">Cloud Control Systems</span>
           <span class="tag">Polar Codes</span>
           <span class="tag">UAV Systems</span>
@@ -353,15 +375,15 @@
       <div class="timeline">
         <article class="item">
           <div class="item-top"><div><h3>Ph.D. in Control Science and Engineering</h3><div class="meta"><a href="https://www.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Beijing Institute of Technology</a>, China · School of Automation</div></div><div class="date">2018.09 – 2024.06</div></div>
-          <p><strong>Thesis:</strong> Enhancing Physical Layer Communications and Security in Optimized CCSs. <strong>Adviser:</strong> Professor Yuanqing Xia, Fellow, IEEE.</p>
+          <p><span class="detail-line"><strong>Thesis:</strong> Enhancing Physical Layer Communications and Security in Optimized CCSs.</span><span class="detail-line"><strong>Adviser:</strong> Professor Yuanqing Xia, Fellow, IEEE.</span></p>
         </article>
         <article class="item">
           <div class="item-top"><div><h3>M.S. in Control Science and Engineering</h3><div class="meta"><a href="https://www.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Beijing Institute of Technology</a>, China · School of Automation</div></div><div class="date">2015.09 – 2017.07</div></div>
-          <p><strong>Thesis:</strong> A Detection and Mitigation Approach for CCSs against DDoS Attack. <strong>Adviser:</strong> Professor Yuanqing Xia, Fellow, IEEE.</p>
+          <p><span class="detail-line"><strong>Thesis:</strong> A Detection and Mitigation Approach for CCSs against DDoS Attack.</span><span class="detail-line"><strong>Adviser:</strong> Professor Yuanqing Xia, Fellow, IEEE.</span></p>
         </article>
         <article class="item">
           <div class="item-top"><div><h3>B.Sc. in Electrical Engineering</h3><div class="meta"><a href="https://www.uetpeshawar.edu.pk/" target="_blank" rel="noopener noreferrer">University of Engineering and Technology, Peshawar</a> · Department of Electrical Communication Engineering</div></div><div class="date">2009.09 – 2014.09</div></div>
-          <p><strong>Thesis:</strong> Ultrasonic Radar System. <strong>Adviser:</strong> Assistant Professor Sahib Khan.</p>
+          <p><span class="detail-line"><strong>Thesis:</strong> Ultrasonic Radar System.</span><span class="detail-line"><strong>Adviser:</strong> Assistant Professor Sahib Khan.</span></p>
         </article>
       </div>
     </section>
@@ -375,8 +397,8 @@
       </div>
       <div class="timeline">
         <article class="item">
-          <div class="item-top"><div><h3>Postdoctoral Researcher</h3><div class="meta"><a href="https://zhengzhou.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Zhengzhou Research Institute, Beijing Institute of Technology</a></div></div><div class="date">2024.10 – Present</div></div>
-          <p>Postdoctoral research focused on secure and resilient CPSs, integrating Polar Codes, UAV systems, chaotic systems, and AI/ML techniques to improve communication security, reliability, and system resilience.</p>
+          <div class="item-top"><div><h3>Postdoctoral Researcher in Intelligent Science and Technology</h3><div class="meta"><a href="https://zhengzhou.bit.edu.cn/" target="_blank" rel="noopener noreferrer">Zhengzhou Research Institute, Beijing Institute of Technology</a></div></div><div class="date">2024.10 – Present</div></div>
+          <p>Current postdoctoral work integrates Polar Codes, UAV systems, chaotic systems, and AI/ML techniques to strengthen communication security, reliability, and robustness in networked control environments.</p>
         </article>
         <article class="item">
           <div class="item-top"><div><h3>Visiting Scholar</h3><div class="meta"><a href="https://www.polsl.pl/en/" target="_blank" rel="noopener noreferrer">Silesian University of Technology</a>, Gliwice, Poland</div></div><div class="date">2021.10 – 2024.09</div></div>
@@ -414,7 +436,7 @@
       <div class="pub-list">
         <article class="pub-card"><div class="pub-title">[J1] Efficient Multi-Dimensional Pipelined Chaotic Bulk-Codewords-Encryption for Cloud Control Systems</div><div class="pub-details"><strong>Yasir Ali</strong>, T. Manzoor, H. Yang, L. You, R. Ma, C. Yan, T. Wang, and Y. Xia, Fellow, IEEE · <em>IEEE Transactions on Cybernetics</em>, 55, 5014–5026 (2025)</div><div class="pub-actions"><span class="badge if">Impact Factor 10.5</span><a class="doi-link" href="https://doi.org/10.1109/TCYB.2025.3579036" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
         <article class="pub-card"><div class="pub-title">[J2] Chaos Encryption-Based Secure Polar Coding for Network-Oriented Cloud Control System</div><div class="pub-details"><strong>Yasir Ali</strong>, Y. Xia, W. Sułek, and T. Manzoor · <em>IEEE Transactions on Industrial Informatics</em>, 20, 3935–3947 (2023)</div><div class="pub-actions"><span class="badge if">Impact Factor 9.9</span><a class="doi-link" href="https://doi.org/10.1109/TII.2023.3316217" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
-        <article class="pub-card"><div class="pub-title">[J3] Artificial Intelligence Driven Channel Coding and Resource Optimization for Wireless Networks</div><div class="pub-details"><strong>Yasir Ali</strong>, T. Manzoor, H. Yang, and Y. Xia, Fellow, IEEE · <em>Computer Science Review</em> (Accepted)</div><div class="pub-actions"><span class="badge accepted">Accepted</span><span class="badge if">Impact Factor 12.7</span></div></article>
+        <article class="pub-card"><div class="pub-title">[J3] Artificial Intelligence Driven Channel Coding and Resource Optimization for Wireless Networks: A Systematic Survey</div><div class="pub-details"><strong>Yasir Ali</strong>, T. Manzoor, H. Yang, C. Yan, and Y. Xia, Fellow, IEEE · <em>Computer Science Review</em>, 62, Article 101004 (November 2026)</div><div class="pub-actions"><span class="badge if">Impact Factor 12.7</span><a class="doi-link" href="https://doi.org/10.1016/j.cosrev.2026.101004" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
         <article class="pub-card"><div class="pub-title">[J4] Resilient Output Feedback Tube-Based MPC for Cyber-Physical Systems Under Hybrid Attacks</div><div class="pub-details">H. Yang, Y. Ma, H. Xie, <strong>Yasir Ali</strong>, L. Dai, and Y. Xia, Fellow, IEEE · <em>IEEE Transactions on Circuits and Systems I: Regular Papers</em></div><div class="pub-actions"><span class="badge if">Impact Factor 5.2</span><a class="doi-link" href="https://doi.org/10.1109/TCSI.2025.3597736" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
         <article class="pub-card"><div class="pub-title">[J5] Compound Learning-Based Model Predictive Control Approach for Ducted-Fan Aerial Vehicles</div><div class="pub-details">T. Manzoor, H. Pei, Z. Sun, and <strong>Yasir Ali</strong> · <em>IEEE Transactions on Neural Networks and Learning Systems</em>, 36, 9395–9407 (2024)</div><div class="pub-actions"><span class="badge if">Impact Factor 8.9</span><a class="doi-link" href="https://doi.org/10.1109/TNNLS.2024.3422401" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
         <article class="pub-card"><div class="pub-title">[J6] QORA: Neural-Enhanced Interference-Aware Resource Provisioning for Serverless Computing</div><div class="pub-details">R. Ma, Y. Zhan, C. Wu, Z. Hong, <strong>Yasir Ali</strong>, and X. Yuanqing, Fellow, IEEE · <em>IEEE Transactions on Automation Science and Engineering</em>, 22, 10609–10624 (2025)</div><div class="pub-actions"><span class="badge if">Impact Factor 6.4</span><a class="doi-link" href="https://doi.org/10.1109/TASE.2025.3526197" target="_blank" rel="noopener noreferrer">DOI</a></div></article>
@@ -526,7 +548,7 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <p><strong>Dr. Yasir Ali</strong> · Postdoctoral Researcher · Secure and Resilient Cyber-Physical Systems</p>
+      <p><strong>Dr. Yasir Ali</strong> · Postdoctoral Researcher in Intelligent Science and Technology · Cyber-Physical Systems, Coding, and Control</p>
       <p>For collaborations and academic inquiries, contact <a href="mailto:yasiralibit@gmail.com">yasiralibit@gmail.com</a>. Last updated: 2026.</p>
     </div>
   </footer>
